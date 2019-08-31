@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="人工智能,网络安全,AI," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="二尺九五博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="对AI应用于网络安全的正确认识导读：现在人们对于AI的关注基本上都集中在工业机器人、自动驾驶汽车等领域，但要了解AI的真正影响领域，它的怀疑者和批评者都应该来了解一下未来它在网络安全领域的应用。早在2014年美国智库战略与国际问题研究中心就发布报告称，网络犯罪每年估计给全球造成4450亿美元的经济损失，其中仅给中国造成的经济损失就超过450亿美元，每年窃取超过10亿条个人信息记录，如信用卡号和健康">
+<meta name="keywords" content="人工智能,网络安全,AI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对AI应用于网络安全的正确认识">
+<meta property="og:url" content="https://2c95.github.io/2018/10/23/2018-10-23-sec-ai-2/index.html">
+<meta property="og:site_name" content="二尺九五博客">
+<meta property="og:description" content="对AI应用于网络安全的正确认识导读：现在人们对于AI的关注基本上都集中在工业机器人、自动驾驶汽车等领域，但要了解AI的真正影响领域，它的怀疑者和批评者都应该来了解一下未来它在网络安全领域的应用。早在2014年美国智库战略与国际问题研究中心就发布报告称，网络犯罪每年估计给全球造成4450亿美元的经济损失，其中仅给中国造成的经济损失就超过450亿美元，每年窃取超过10亿条个人信息记录，如信用卡号和健康">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-23T01:58:19.391Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="对AI应用于网络安全的正确认识">
+<meta name="twitter:description" content="对AI应用于网络安全的正确认识导读：现在人们对于AI的关注基本上都集中在工业机器人、自动驾驶汽车等领域，但要了解AI的真正影响领域，它的怀疑者和批评者都应该来了解一下未来它在网络安全领域的应用。早在2014年美国智库战略与国际问题研究中心就发布报告称，网络犯罪每年估计给全球造成4450亿美元的经济损失，其中仅给中国造成的经济损失就超过450亿美元，每年窃取超过10亿条个人信息记录，如信用卡号和健康">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://2c95.github.io/2018/10/23/2018-10-23-sec-ai-2/"/>
+
+
+
+
+
+  <title>对AI应用于网络安全的正确认识 | 二尺九五博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">二尺九五博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">瘦一点，再瘦一点</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-日程">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-地图">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            地图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://2c95.github.io/2018/10/23/2018-10-23-sec-ai-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="二尺九五">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二尺九五博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">对AI应用于网络安全的正确认识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-23T00:00:00+08:00">
+                2018-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="对AI应用于网络安全的正确认识"><a href="#对AI应用于网络安全的正确认识" class="headerlink" title="对AI应用于网络安全的正确认识"></a>对AI应用于网络安全的正确认识</h1><h2 id="导读："><a href="#导读：" class="headerlink" title="导读："></a>导读：</h2><p>现在人们对于AI的关注基本上都集中在工业机器人、自动驾驶汽车等领域，但要了解AI的真正影响领域，它的怀疑者和批评者都应该来了解一下未来它在网络安全领域的应用。<br>早在2014年美国智库战略与国际问题研究中心就发布报告称，网络犯罪每年估计给全球造成4450亿美元的经济损失，其中仅给中国造成的经济损失就超过450亿美元，每年窃取超过10亿条个人信息记录，如信用卡号和健康医疗记录。如此给人类带来巨大危害的领域，当然是考验一个新技术是否具有存在价值的重要参考标准。<br>而且AI这两年在网络安全领域的发展也预示着，如果人类要赢得网络犯罪这场战争，除了依靠人工智能来补充我们人类的专业技能和经验外，别无选择。<br>随着网络犯罪数量和复杂性的不断增长，网络安全行业已开始通过使用AI来应对这一挑战。然而，与许多新技术一样，目前人们对AI可以带了的好处进行了不切实际的夸大和幻想。<br>因此，我们有必要来重新反思一下AI真正能为网络安全业带来什么？AI的哪些方面的能力让网络安全如此需要它？这还得从对AI的重新定义开始谈起，这里我们把AI定义为“增强智力”，这种定义似乎显得有点简单，但本文认为这种重新定义对于未来AI的理解和接受以及我们将其应用于对社会至关重要的领域（从教育到医疗保健到环境保护）的能力至关重要。</p>
+<h2 id="重新认识AI的认知安全"><a href="#重新认识AI的认知安全" class="headerlink" title="重新认识AI的认知安全"></a>重新认识AI的认知安全</h2><p>认知系统是自学习系统，可以使用数据挖掘、机器学习、自然语言处理和人机交互来模仿人脑的工作方式。<br>认知安全实现了两个广泛且相关的功能：</p>
+<p>一是，使用认知系统来分析安全趋势，将大量结构化和非结构化的数据提炼成信息，然后提炼成可执行的知识、以实现持续性的安全性和业务改进。<br>二是，使用自动化的数据驱动型安全技术、工艺和流程，支持认知系统享有最高级别的上下文和准确性。<br>目前，新一代AI系统正在训练着来理解、推理和学习不断演进的安全威胁。开始将安全性的直觉和专业知识构建到新的防御中，它可以像安全专家那样每天分析研究报告、Web文本、威胁数据和其他与安全性相关的结构化和非结构化数据，但其分析规模是我们前所未见的。这就是安全专家真正依靠的AI的本质。<br>AI的成了网络安全防御的重要工具，AI对网络安全的帮助越来越大，这种趋势已经变得越来越明显。<br>然而，最令人关注的事实是，80％的网络攻击是由高度有组织的犯罪集团所发起的，这些组织在其内部可以自由地交换泄露的数据，黑客工具和技巧。对于这些暗地里的网络安全信息，网络安全专家根本就没有办法了解，而且这种情况还在继续恶化，为了应对日益增加的网络威胁，我们就只能增加网络安全保护的人手了，但据IBM调查了解，目前世界各地空缺的信息安全职位数预计为208000，并预期在2020年将增长到150万。<br>很明显，我们不能坐以待毙，此时AI的优势就发挥出来了，未来认知系统在安全领域的应用将有效缓解安全人才短缺的现状，并提高认知系统使用者安全人士的专业能力。认知系统作为一个可扩展的资源，可以减轻安全分析的工作，可作为经常人手不足的安全部门的特别补充。它提供以人为核心的通信，如先进的可视化、交互式漏洞分析、风险评估、修复和潜在原因分析。认知系统将能够发现异常状况和错误逻辑，并提供基于证据的推理。这可以让安全人士权衡替代措施结果并提高决策水平。<br>这样做的好处很明显，安全专家越来越认识到AI认知安全的好处。IBM商业价值研究院最近的一项调查发现，近60％的安全专业人士认为认知安全解决方案可以显着减缓网络犯罪。<br>另外同一项调查还显示了，在未来两到三年内实施认知功能安全解决方案的公司的百分比将增加三倍，从7％增至21％。然而，借助认知系统解决方案并不等于要减少对网络安全专家的需要，因为打击网络犯罪将需要人与机器之间更紧密的合作。而是要让安全专家借助AI认知系统来帮助他们增强甚至自动化对威胁的理解，使专家对最新的攻击更具判断力，以便腾出宝贵的时间着重处理其他紧迫的问题。</p>
+<h2 id="人类用于网络安全认知的惊人消耗"><a href="#人类用于网络安全认知的惊人消耗" class="headerlink" title="人类用于网络安全认知的惊人消耗"></a>人类用于网络安全认知的惊人消耗</h2><p>即使所有的网络安全人员都得到满足并且全负荷工作，我们仍然会面临网络安全危机，因为人类根本无法掌握数以万计的软件漏洞，或者阅读每月新增的数万篇安全分析报告，根据 IBM 的一份报告，一个网络安全组织平均每天能发现 20 万次的安全事件，企业每年花费130万美元，浪费了21000个小时来处理误报的网络安全事件，另外网络安全人员还要分析每年发布的10000份安全研究论文以及关注每个月发布的60000多个安全博客，如此惊人的数据量的根本无法进行全面的跟踪，更不要说也很难把握整个事件的全貌了，更要命的是全球每天会生成超过2.5艾字节的数据，其中20%是结构化数据，80%是非结构化数据。据IDC的调查报告显示，这些非结构化的数据每年都按指数增长60%。</p>
+<h2 id="那么，什么是非结构化数据"><a href="#那么，什么是非结构化数据" class="headerlink" title="那么，什么是非结构化数据?"></a>那么，什么是非结构化数据?</h2><p>非结构化数据主要是指那些无法用固定结构来逻辑表达实现的数据，简单来说就是用户散落在论坛、微博、微信或其他渠道发表的关于产品的各种评价或吐槽。<br>也就是说网络安全的巨大信息其实都是潜藏在这些非结构化数据中的，那怎样才能充分利用非结构化数据呢?<br>面对这些非结构化数据，也只有发挥AI的认知安全能力，让它来理解、推理和学习这堆非结构化数据了，另外，AI的信息处理能力是人类无法企及的，首先AI能获取那些非结构化的、不易为机器理解的各种形式的网络安全分析报告，网络安全博客，网络安全文章，网络安全视频，网络安全警报和其他包含不准确人类语言的非结构化数据其次使用自然语言来处理这些获取的信息，同时对信息进行分析，最后得出让一份报告，然安全专家进行最终把关，以了解潜在的安全问题是什么。<br>打了个比方，比如你去医院看病，医生不会只是着眼于病人的结构化数据，比如血压、心脏率、呼吸等等纸面数据，还会考虑到非结构化数据，比如病人当时的口头答复、情绪等等。换句话说，医生要考虑了所有不在数据范围内的东西，才能让有助于他们了解到底发生了什么。</p>
+<h2 id="未来，网络安全人员将和AI共同协作、互相帮助、共同学习"><a href="#未来，网络安全人员将和AI共同协作、互相帮助、共同学习" class="headerlink" title="未来，网络安全人员将和AI共同协作、互相帮助、共同学习"></a>未来，网络安全人员将和AI共同协作、互相帮助、共同学习</h2><h3 id="安全预测阶段："><a href="#安全预测阶段：" class="headerlink" title="安全预测阶段："></a>安全预测阶段：</h3><p>AI认知系统正在学习着如何监控非结构化数据，以在风险出现之前检测出风险。随着AI的继续深化学习，AI系统将更加熟练地检测出计算机故障和恶意攻击之间的关系，从而减少网络安全分析师在提前判断上所花费的时间。</p>
+<h3 id="安全防御阶段："><a href="#安全防御阶段：" class="headerlink" title="安全防御阶段："></a>安全防御阶段：</h3><p>一旦确定了存在攻击行为，安全分析师通常会向互联网寻找解决问题的最新方法，然后生成数千页的防护报告，可是这些报告是否就是理想的解决方案就不得而知了，真是即慢有不准确。在这个阶段，AI可以在分析大量信息（包括非结构化数据）方面发挥重要作用，以识别最有效的防御方案。<br>随着分析人员不断把判断结果整合到AI认知模型中，作为下一次的系统认知标准，以后这个过程不断循环，系统检测到的攻击就越多反馈也就越多，而人类的认知也不断的提高，最终人机交互会建立起一个完美的互动效应。<br>虽然我们对AI应用于网络安全的认识很前沿，但在具体的实践中，还需要我们一步一步来慢慢实现。目前IBM的Watson等认知工具已经开始慢慢的让愿望变成现实了。<br>2016年5月，IBM就已经宣布，Watson正在把其认知学习的能力应用到分析、识别网络安全的威胁上。但首先，它不得不快速学习。<br>IBM Watson 是认知计算系统的杰出代表，也是一个技术平台。认知计算代表一种全新的计算模式，它包含信息分析，自然语言处理和机器学习领域的大量技术创新，能够助力决策者从大量非结构化数据中揭示非凡的洞察。<br>就像上面分析的那样，Watson并不会替代人类的作用，而是帮助人类做出更快更全面地反应。IBM的研究显示，安全团队在Watson的配合下每天平均能够识别筛选200000个潜藏重大安全事件。这不仅能够让计算机优先处理这些事件，而且揭示Watson在未来能够更快地适应广阔的互联网世界。<br>Avnet（财富500强公司，是全球最大的电子元件、计算机产品和嵌入技术分销商）的安全主管Sean Valcamp就说道：<br>传统的网络安全分析模型可以看做是站在高速公路边上的交警，能够识别潜在的违法者。但是当车流量不断增加，那么分辨是否超车或者是被盗车辆就不那么容易了。而通过使用Watson，就像是坐在直升飞机上审视相同的高速公路。<br>以前我们一想到AI就经常自动地联想到未来AI会抢走我们的饭碗。通过本文的分析，在网络犯罪的这场战争中，只有人工智能加人才是未来强大的网络安全保障。再重复一遍本文的观点，AI将会反过来让人类通过增强专业知识的学习来应对日益增长的网络安全威胁，但前提是人们要正确认识AI在网络安全的应用。</p>
+<h3 id="本文翻译于venturebeat"><a href="#本文翻译于venturebeat" class="headerlink" title="本文翻译于venturebeat."></a>本文翻译于venturebeat.</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    二尺九五
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://2c95.github.io/2018/10/23/2018-10-23-sec-ai-2/" title="对AI应用于网络安全的正确认识">https://2c95.github.io/2018/10/23/2018-10-23-sec-ai-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://2c95.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/人工智能/" rel="tag"># 人工智能</a>
+          
+            <a href="/tags/网络安全/" rel="tag"># 网络安全</a>
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/23/2018-10-23-sec-ai/" rel="next" title="当人工智能碰到网络安全">
+                <i class="fa fa-chevron-left"></i> 当人工智能碰到网络安全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/24/2018-10-24-HPC-User/" rel="prev" title="HPC使用说明">
+                HPC使用说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="二尺九五" />
+            
+              <p class="site-author-name" itemprop="name">二尺九五</p>
+              <p class="site-description motion-element" itemprop="description">公众号：二尺九五</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对AI应用于网络安全的正确认识"><span class="nav-number">1.</span> <span class="nav-text">对AI应用于网络安全的正确认识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导读："><span class="nav-number">1.1.</span> <span class="nav-text">导读：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重新认识AI的认知安全"><span class="nav-number">1.2.</span> <span class="nav-text">重新认识AI的认知安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#人类用于网络安全认知的惊人消耗"><span class="nav-number">1.3.</span> <span class="nav-text">人类用于网络安全认知的惊人消耗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那么，什么是非结构化数据"><span class="nav-number">1.4.</span> <span class="nav-text">那么，什么是非结构化数据?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未来，网络安全人员将和AI共同协作、互相帮助、共同学习"><span class="nav-number">1.5.</span> <span class="nav-text">未来，网络安全人员将和AI共同协作、互相帮助、共同学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全预测阶段："><span class="nav-number">1.5.1.</span> <span class="nav-text">安全预测阶段：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安全防御阶段："><span class="nav-number">1.5.2.</span> <span class="nav-text">安全防御阶段：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本文翻译于venturebeat"><span class="nav-number">1.5.3.</span> <span class="nav-text">本文翻译于venturebeat.</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">二尺九五</span>
+<a href="http://www.miitbeian.gov.cn/">豫ICP备18040558号</a> 
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

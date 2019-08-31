@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="搬瓦工,Docker,Nginx,Jupyter,shadowsocks," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="二尺九五博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Dcocker安装与配置 问题描述  最近在群里听说docker很火，于是自己抱着试试的态度，想玩玩，可是遇到了一些问题，记录下来，方便备忘。虚拟机操作系统是Centos6.5，google很多教程，都不成功。 123456789[root@localhost ~]# yum install docker-ioLoaded plugins: fastestmirror, refresh-packa">
+<meta name="keywords" content="搬瓦工,Docker,Nginx,Jupyter,shadowsocks">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搬瓦工配置">
+<meta property="og:url" content="https://2c95.github.io/2017/11/30/2017-11-30/index.html">
+<meta property="og:site_name" content="二尺九五博客">
+<meta property="og:description" content="Dcocker安装与配置 问题描述  最近在群里听说docker很火，于是自己抱着试试的态度，想玩玩，可是遇到了一些问题，记录下来，方便备忘。虚拟机操作系统是Centos6.5，google很多教程，都不成功。 123456789[root@localhost ~]# yum install docker-ioLoaded plugins: fastestmirror, refresh-packa">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-10T06:09:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搬瓦工配置">
+<meta name="twitter:description" content="Dcocker安装与配置 问题描述  最近在群里听说docker很火，于是自己抱着试试的态度，想玩玩，可是遇到了一些问题，记录下来，方便备忘。虚拟机操作系统是Centos6.5，google很多教程，都不成功。 123456789[root@localhost ~]# yum install docker-ioLoaded plugins: fastestmirror, refresh-packa">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://2c95.github.io/2017/11/30/2017-11-30/"/>
+
+
+
+
+
+  <title>搬瓦工配置 | 二尺九五博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">二尺九五博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">瘦一点，再瘦一点</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-日程">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-地图">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            地图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://2c95.github.io/2017/11/30/2017-11-30/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="二尺九五">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二尺九五博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">搬瓦工配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T00:00:00+08:00">
+                2017-11-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Dcocker安装与配置"><a href="#Dcocker安装与配置" class="headerlink" title="Dcocker安装与配置"></a>Dcocker安装与配置</h2><ul>
+<li><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3></li>
+</ul>
+<p>最近在群里听说docker很火，于是自己抱着试试的态度，想玩玩，可是遇到了一些问题，记录下来，方便备忘。虚拟机操作系统是Centos6.5，google很多教程，都不成功。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install docker-io</span><br><span class="line">Loaded plugins: fastestmirror, refresh-packagekit, security</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line">* base: mirrors.skyshe.cn</span><br><span class="line">* extras: mirrors.skyshe.cn</span><br><span class="line">* updates: centosx4.centos.org</span><br><span class="line">Setting up Install Process</span><br><span class="line">No package docker-io available.</span><br><span class="line">Error: Nothing to do</span><br></pre></td></tr></table></figure>
+<p>总共尝试了好几次，所谓的镜像很不稳定，不是没有找到，就是找到了，下了一半就中途断了，哎，网上总是说一句话搞定，可是一句话搞定要有前提呀，于是乎，我看了开源中国的docker更新记录</p>
+<ul>
+<li><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install https://get.docker.com/rpm/1.7.1/centos-6/RPMS/x86_64/docker-engine-1.7.1-1.el6.x86_64.rpm</span><br><span class="line">Loaded plugins: fastestmirror, refresh-packagekit, security</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line">* base: mirrors.163.com</span><br><span class="line">* extras: mirrors.skyshe.cn</span><br><span class="line">* updates: centosx4.centos.org</span><br><span class="line">Setting up Install Process</span><br><span class="line">docker-engine-1.7.1-1.el6.x86_64.rpm | 4.5 MB 00:07</span><br><span class="line">Examining /var/tmp/yum-root-YSfgzS/docker-engine-1.7.1-1.el6.x86_64.rpm: docker-engine-1.7.1-1.el6.x86_64</span><br><span class="line">Marking /var/tmp/yum-root-YSfgzS/docker-engine-1.7.1-1.el6.x86_64.rpm to be installed</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package docker-engine.x86_64 0:1.7.1-1.el6 will be installed</span><br><span class="line">--&gt; Processing Dependency: libcgroup for package: docker-engine-1.7.1-1.el6.x86_64</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package libcgroup.x86_64 0:0.40.rc1-16.el6 will be installed</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br></pre></td></tr></table></figure>
+<p>看到这些，你就可以愉快的玩耍了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# service docker start</span><br><span class="line">Starting cgconfig service: [ OK ]</span><br><span class="line">Starting docker: [ OK ]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="Docker基本用法"><a href="#Docker基本用法" class="headerlink" title="Docker基本用法"></a>Docker基本用法</h3></li>
+</ul>
+<p>…….待完善</p>
+<h2 id="Nginx安装与配置"><a href="#Nginx安装与配置" class="headerlink" title="Nginx安装与配置"></a>Nginx安装与配置</h2><ul>
+<li><h3 id="nginx安装"><a href="#nginx安装" class="headerlink" title="nginx安装"></a>nginx安装</h3></li>
+</ul>
+<p>1、使用putty或类似的SSH工具登陆VPS或服务器；</p>
+<p>登陆后运行：screen -S lnmp</p>
+<p>如果提示screen: command not found 命令不存在可以执行：yum install screen 或 apt-get install screen安装，详细内容参考screen教程。</p>
+<p>2、下载并安装LNMP一键安装包：</p>
+<p>您可以选择使用下载版(推荐美国及海外VPS或空间较小用户使用)或者完整版(推荐国内VPS使用，国内用户可用在下载中找国内下载地址替换)，两者没什么区别，只是完整版把一些需要的源码文件预先放到安装包里。深度/deepin只能使用服务器版，桌面版请勿安装！！</p>
+<p>安装LNMP稳定版<br>wget -c <a href="http://soft.vpser.net/lnmp/lnmp1.4.tar.gz" target="_blank" rel="noopener">http://soft.vpser.net/lnmp/lnmp1.4.tar.gz</a> &amp;&amp; tar zxf lnmp1.4.tar.gz &amp;&amp; cd lnmp1.4 &amp;&amp; ./install.sh lnmp</p>
+<p>默认安装lnmp可不写，如需要安装LNMPA或LAMP，将./install.sh 后面的参数替换为lnmpa或lamp即可。如需更改网站和数据库目录先修改安装包目录下的 lnmp.conf 文件。</p>
+<ul>
+<li><h3 id="LNMP相关软件安装目录"><a href="#LNMP相关软件安装目录" class="headerlink" title="LNMP相关软件安装目录"></a>LNMP相关软件安装目录</h3><p>Nginx 目录: /usr/local/nginx/<br>MySQL 目录 : /usr/local/mysql/<br>MySQL数据库所在目录：/usr/local/mysql/var/<br>MariaDB 目录 : /usr/local/mariadb/<br>MariaDB数据库所在目录：/usr/local/mariadb/var/<br>PHP目录 : /usr/local/php/<br>多PHP版本目录 : /usr/local/php5.5/ 其他版本前面5.5的版本号换成其他即可<br>PHPMyAdmin目录 : 0.9版本为/home/wwwroot/phpmyadmin/ 1.0及以后版本为 /home/wwwroot/default/phpmyadmin/ 强烈建议将此目录重命名为其不容易猜到的名字。phpmyadmin可自己从官网下载新版替换。<br>默认网站目录 : 0.9版本为 /home/wwwroot/ 1.0及以后版本为 /home/wwwroot/default/<br>Nginx日志目录：/home/wwwlogs/<br>/root/vhost.sh添加的虚拟主机配置文件所在目录：/usr/local/nginx/conf/vhost/<br>PureFtpd 目录：/usr/local/pureftpd/<br>PureFtpd web管理目录： 0.9版为/home/wwwroot/default/ftp/ 1.0版为 /home/wwwroot/default/ftp/<br>Proftpd 目录：/usr/local/proftpd/<br>Redis 目录：/usr/local/redis/</p>
+</li>
+<li><h3 id="LNMP相关配置文件位置"><a href="#LNMP相关配置文件位置" class="headerlink" title="LNMP相关配置文件位置"></a>LNMP相关配置文件位置</h3><p>Nginx主配置(默认虚拟主机)文件：/usr/local/nginx/conf/nginx.conf<br>添加的虚拟主机配置文件：/usr/local/nginx/conf/vhost/域名.conf<br>MySQL配置文件：/etc/my.cnf<br>PHP配置文件：/usr/local/php/etc/php.ini<br>php-fpm配置文件：/usr/local/php/etc/php-fpm.conf<br>PureFtpd配置文件：/usr/local/pureftpd/pure-ftpd.conf 1.3及更高版本：/usr/local/pureftpd/etc/pure-ftpd.conf<br>PureFtpd MySQL配置文件：/usr/local/pureftpd/pureftpd-mysql.conf<br>Proftpd配置文件：/usr/local/proftpd/etc/proftpd.conf 1.2及之前版本为/usr/local/proftpd/proftpd.conf<br>Proftpd 用户配置文件：/usr/local/proftpd/etc/vhost/用户名.conf<br>Redis 配置文件：/usr/local/redis/etc/redis.conf</p>
+</li>
+<li><h3 id="虚拟主机配置文件示例（1）"><a href="#虚拟主机配置文件示例（1）" class="headerlink" title="虚拟主机配置文件示例（1）"></a>虚拟主机配置文件示例（1）</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name www.xmakers.cn xmakers.cn;</span><br><span class="line">        index index.html index.htm index.php default.html default.htm default.php;</span><br><span class="line">        root  /home/wwwroot/www.xmakers.cn;</span><br><span class="line"></span><br><span class="line">        include other.conf;</span><br><span class="line">        #error_page   404   /404.html;</span><br><span class="line"></span><br><span class="line">        # Deny access to PHP files in specific directory</span><br><span class="line">        #location ~ /(wp-content|uploads|wp-includes|images)/.*\.php$ &#123; deny all; &#125;</span><br><span class="line"></span><br><span class="line">        include enable-php.conf;</span><br><span class="line"></span><br><span class="line">        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$</span><br><span class="line">        &#123;</span><br><span class="line">            expires      30d;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ .*\.(js|css)?$</span><br><span class="line">        &#123;</span><br><span class="line">            expires      12h;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ /.well-known &#123;</span><br><span class="line">            allow all;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location ~ /\.</span><br><span class="line">        &#123;</span><br><span class="line">            deny all;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log  /home/wwwlogs/www.xmakers.cn.log;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="虚拟主机配置文件示例（2）—Jupyter-notebook"><a href="#虚拟主机配置文件示例（2）—Jupyter-notebook" class="headerlink" title="虚拟主机配置文件示例（2）—Jupyter notebook"></a>虚拟主机配置文件示例（2）—Jupyter notebook</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">upstream notebook &#123;</span><br><span class="line">    server localhost:8888;</span><br><span class="line">&#125;</span><br><span class="line">server&#123;</span><br><span class="line">listen 80;</span><br><span class="line">server_name i.xmakers.cn;</span><br><span class="line">root /home/wwwroot/i.xmakers.cn;            </span><br><span class="line"></span><br><span class="line">location / &#123;</span><br><span class="line">        proxy_pass            http://notebook;</span><br><span class="line">        proxy_set_header      Host $host;</span><br><span class="line">	access_log		/home/wwwlogs/i.xmakers.cn.log;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location ~ /api/kernels/ &#123;</span><br><span class="line">        proxy_pass            http://notebook;</span><br><span class="line">        proxy_set_header      Host $host;</span><br><span class="line">        # websocket support</span><br><span class="line">        proxy_http_version    1.1;</span><br><span class="line">        proxy_set_header      Upgrade &quot;websocket&quot;;</span><br><span class="line">        proxy_set_header      Connection &quot;Upgrade&quot;;</span><br><span class="line">        proxy_read_timeout    86400;</span><br><span class="line">    &#125;</span><br><span class="line">location ~ /terminals/ &#123;</span><br><span class="line">        proxy_pass            http://notebook;</span><br><span class="line">        proxy_set_header      Host $host;</span><br><span class="line">        # websocket support</span><br><span class="line">        proxy_http_version    1.1;</span><br><span class="line">        proxy_set_header      Upgrade &quot;websocket&quot;;</span><br><span class="line">        proxy_set_header      Connection &quot;Upgrade&quot;;</span><br><span class="line">        proxy_read_timeout    86400;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="虚拟主机配置文件示例（3）—Owncloud-docker"><a href="#虚拟主机配置文件示例（3）—Owncloud-docker" class="headerlink" title="虚拟主机配置文件示例（3）—Owncloud(docker)"></a>虚拟主机配置文件示例（3）—Owncloud(docker)</h3></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">upstream cloud &#123;</span><br><span class="line">	server localhost:2345;</span><br><span class="line">&#125;</span><br><span class="line">server&#123;</span><br><span class="line">listen 80;</span><br><span class="line">server_name cloud.xmakers.cn;</span><br><span class="line">root /home/wwwroot/cloud.xmakers.cn;</span><br><span class="line"></span><br><span class="line">location / &#123;</span><br><span class="line">	proxy_pass	http://cloud;</span><br><span class="line">	proxy_set_header	Host $host; </span><br><span class="line">	#access_log	home/wwwlogs/cloud.xmakers.cn.log;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Jupyter安装与配置"><a href="#Jupyter安装与配置" class="headerlink" title="Jupyter安装与配置"></a>Jupyter安装与配置</h2><ul>
+<li><h3 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h3></li>
+</ul>
+<p>jupyter notebook（原名ipython）可是科学计算界的必备工具，友好的界面，方便的交互，支持Markdown，集中的极客们想要的一切特点，同时又制作的如此优雅和精美，真是难能可贵的又好看又好用的工具。</p>
+<ul>
+<li><h3 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h3></li>
+</ul>
+<p><a href="https://jupyter.org/" target="_blank" rel="noopener">https://jupyter.org/</a></p>
+<ul>
+<li><h3 id="并行计算支持"><a href="#并行计算支持" class="headerlink" title="并行计算支持"></a>并行计算支持</h3></li>
+</ul>
+<p>这货支持并行计算，而且很全面，像MPI，OpenMP等，支持部署在集群上，具体可以参考文档</p>
+<ul>
+<li><h3 id="多语言支持"><a href="#多语言支持" class="headerlink" title="多语言支持"></a>多语言支持</h3></li>
+</ul>
+<p>这里的语言不是英语、汉语，而是不同的编程语言，包括在科学界很流行的julia、Matlab、C、C#等，超多支持，令我震惊了，具体可以看这个表。</p>
+<ul>
+<li><h3 id="桌面端的环境搭建"><a href="#桌面端的环境搭建" class="headerlink" title="桌面端的环境搭建"></a>桌面端的环境搭建</h3></li>
+</ul>
+<p>按照官网的说法，极其推荐 Anaconda，有需求的可以直接到 Anaconda官网下载可用的安装包，支持win、Linux、MacOS，真是除了手机都支持O(∩_∩)O~。</p>
+<ul>
+<li><h3 id="jupyter服务器搭建"><a href="#jupyter服务器搭建" class="headerlink" title="jupyter服务器搭建"></a>jupyter服务器搭建</h3></li>
+</ul>
+<p>网上搜了一下jupyter服务器的搭建，官方给出了很好的多用户服务端jupyterhub，但我的需求就是在VPS搭建好一个jupyter服务网页，完全自己用，所以搭建jupyterhub有些浪费资源，转而去寻找简单的jupyter服务搭建方案，别说，官网也写好文档给我们用了，但文档是用英文写的，看的不舒服，这里把要点写出来，供参考。</p>
+<p>英文文档地址在此，英文好的小伙伴可以直接去实施。</p>
+<ul>
+<li><h4 id="安装-jupyter-notebook"><a href="#安装-jupyter-notebook" class="headerlink" title="安装 jupyter notebook"></a>安装 jupyter notebook</h4></li>
+</ul>
+<p>下载minicanda，并安装（miniconda就是一个精简版的Anaconda），下载地址</p>
+<p>对于python3，就要对应下载Miniconda3，相似的是对于python2，就要下载Miniconda2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line">2. bash Miniconda3-latest-Linux-x86_64.sh</span><br><span class="line">3. conda install ipython</span><br><span class="line">4. conda install jupyter</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h4 id="配置文件所在位置"><a href="#配置文件所在位置" class="headerlink" title="配置文件所在位置"></a>配置文件所在位置</h4></li>
+</ul>
+<p>配置文件目录：/root/.jupyter/jupyter_notebook_config.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip= &apos;*&apos;</span><br><span class="line">c.InteractiveShellApp.matplotlib = &apos;inline&apos;</span><br><span class="line">c.NotebookApp.port = 8888</span><br><span class="line">c.NotebookApp.notebook_dir = &apos;/root/ipython&apos;</span><br><span class="line">c.NotebookApp.open_browser = False</span><br><span class="line">c.NotebookApp.password = u&apos;sha1:ed18801836ea:b8887ae8fb1ee81c9c5e7a17c7f453f83e1f5908&apos;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><h4 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --allow-root</span><br></pre></td></tr></table></figure>
+<p>就可以看到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[I 21:09:34.905 NotebookApp] Serving notebooks from local directory: /home/ipython/run_jupyter</span><br><span class="line">[I 21:09:34.906 NotebookApp] 0 active kernels</span><br><span class="line">[I 21:09:34.906 NotebookApp] The Jupyter Notebook is running at: http://127.0.0.1:8888/</span><br><span class="line">[I 21:09:34.906 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span><br></pre></td></tr></table></figure></p>
+<p>至此，大功告成，打开你的网址xxx.xxx.com是不是可以看到熟悉的jupyter了呢？如有疑问，欢迎留言讨论。O(∩_∩)O~</p>
+<h2 id="ShadowSocks安装与配置"><a href="#ShadowSocks安装与配置" class="headerlink" title="ShadowSocks安装与配置"></a>ShadowSocks安装与配置</h2><ul>
+<li><h3 id="配置多用户"><a href="#配置多用户" class="headerlink" title="配置多用户"></a>配置多用户</h3></li>
+</ul>
+<ol>
+<li><p>首先通过ssh连上vps </p>
+</li>
+<li><p>在终端输入vi /etc/shadowsocks.json创建配置文件 </p>
+</li>
+<li><p>插入以下内容（用户数即为端口数，可任意，注意最后一个端口密码后面没有逗号） </p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;                                                                          </span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,                                                    </span><br><span class="line">        &quot;local_address&quot;: &quot;127.0.0.1&quot;,                                      </span><br><span class="line">        &quot;local_port&quot;:1080,                                                 </span><br><span class="line">    &quot;port_password&quot;:&#123;                                                      </span><br><span class="line">        &quot;9191&quot;:&quot;password1&quot;,                                              </span><br><span class="line">        &quot;9192&quot;:&quot;passwd&quot;,                                                 </span><br><span class="line">        &quot;9113&quot;:&quot;passwd&quot;,                                               </span><br><span class="line">        &quot;9198&quot;:&quot;passwd&quot;,                                                 </span><br><span class="line">        &quot;6142&quot;:&quot;passwd&quot;                                                    </span><br><span class="line">    &#125;,                                                                     </span><br><span class="line">    &quot;timeout&quot;:600,                                                         </span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;                                                 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>服务器地址，填ip或域名 </td>
+</tr>
+<tr>
+<td>local_address</td>
+<td>本地地址 </td>
+</tr>
+<tr>
+<td>local_port</td>
+<td>本地端口，一般1080，可任意 </td>
+</tr>
+<tr>
+<td>server_port</td>
+<td>服务器对外开的端口 </td>
+</tr>
+<tr>
+<td>password</td>
+<td>密码，可以每个服务器端口设置不同密码 </td>
+</tr>
+<tr>
+<td>port_password</td>
+<td>server_port + password ，服务器端口加密码的组合 </td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>超时重连 </td>
+</tr>
+<tr>
+<td>method</td>
+<td>默认: “aes-256-cfb”，见 Encryption </td>
+</tr>
+<tr>
+<td>fast_open</td>
+<td>开启或关闭 TCP_FASTOPEN, 填true / false，需要服务端支持 </td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><h3 id="启动等"><a href="#启动等" class="headerlink" title="启动等"></a>启动等</h3>前端启动：ssserver -c /etc/shadowsocks.json； </li>
+</ul>
+<p>后端启动：ssserver -c /etc/shadowsocks.json -d start；</p>
+<p>停止：ssserver -c /etc/shadowsocks.json -d stop； </p>
+<p>重启(修改配置要重启才生效)：ssserver -c /etc/shadowsocks.json -d restart </p>
+<ul>
+<li><h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3>在终端输入vi /etc/rc.local</li>
+</ul>
+<p>把里面最后的带有ssserver的一大段默认的代码删除掉</p>
+<p>再把ssserver -c /etc/shadowsocks.json -d start加进去</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    二尺九五
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://2c95.github.io/2017/11/30/2017-11-30/" title="搬瓦工配置">https://2c95.github.io/2017/11/30/2017-11-30/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://2c95.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/搬瓦工/" rel="tag"># 搬瓦工</a>
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
+            <a href="/tags/Jupyter/" rel="tag"># Jupyter</a>
+          
+            <a href="/tags/shadowsocks/" rel="tag"># shadowsocks</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/01/2017-12-01-05/" rel="prev" title="寻梦环游记">
+                寻梦环游记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="二尺九五" />
+            
+              <p class="site-author-name" itemprop="name">二尺九五</p>
+              <p class="site-description motion-element" itemprop="description">公众号：二尺九五</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dcocker安装与配置"><span class="nav-number">1.</span> <span class="nav-text">Dcocker安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker基本用法"><span class="nav-number">1.3.</span> <span class="nav-text">Docker基本用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx安装与配置"><span class="nav-number">2.</span> <span class="nav-text">Nginx安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx安装"><span class="nav-number">2.1.</span> <span class="nav-text">nginx安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LNMP相关软件安装目录"><span class="nav-number">2.2.</span> <span class="nav-text">LNMP相关软件安装目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LNMP相关配置文件位置"><span class="nav-number">2.3.</span> <span class="nav-text">LNMP相关配置文件位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟主机配置文件示例（1）"><span class="nav-number">2.4.</span> <span class="nav-text">虚拟主机配置文件示例（1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟主机配置文件示例（2）—Jupyter-notebook"><span class="nav-number">2.5.</span> <span class="nav-text">虚拟主机配置文件示例（2）—Jupyter notebook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟主机配置文件示例（3）—Owncloud-docker"><span class="nav-number">2.6.</span> <span class="nav-text">虚拟主机配置文件示例（3）—Owncloud(docker)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jupyter安装与配置"><span class="nav-number">3.</span> <span class="nav-text">Jupyter安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引子"><span class="nav-number">3.1.</span> <span class="nav-text">引子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官网"><span class="nav-number">3.2.</span> <span class="nav-text">官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行计算支持"><span class="nav-number">3.3.</span> <span class="nav-text">并行计算支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多语言支持"><span class="nav-number">3.4.</span> <span class="nav-text">多语言支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桌面端的环境搭建"><span class="nav-number">3.5.</span> <span class="nav-text">桌面端的环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jupyter服务器搭建"><span class="nav-number">3.6.</span> <span class="nav-text">jupyter服务器搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-jupyter-notebook"><span class="nav-number">3.6.1.</span> <span class="nav-text">安装 jupyter notebook</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置文件所在位置"><span class="nav-number">3.6.2.</span> <span class="nav-text">配置文件所在位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行命令"><span class="nav-number">3.6.3.</span> <span class="nav-text">运行命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ShadowSocks安装与配置"><span class="nav-number">4.</span> <span class="nav-text">ShadowSocks安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置多用户"><span class="nav-number">4.1.</span> <span class="nav-text">配置多用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置说明"><span class="nav-number">4.2.</span> <span class="nav-text">配置说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动等"><span class="nav-number">4.3.</span> <span class="nav-text">启动等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置开机启动"><span class="nav-number">4.4.</span> <span class="nav-text">设置开机启动</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">二尺九五</span>
+<a href="http://www.miitbeian.gov.cn/">豫ICP备18040558号</a> 
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

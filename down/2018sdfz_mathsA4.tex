@@ -1,0 +1,305 @@
+﻿% !Mode::"TeX:UTF-8"
+\documentclass[onecolumn,landscape,UTF8]{ctexart}
+\usepackage{lastpage}
+%\usepackage{times} %use the Times New Roman fonts
+\usepackage{color}
+%\usepackage{placeins}
+\usepackage{ulem}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{setspace} % 行间距
+\usepackage{bm}%\boldsymbol 粗体
+% 数学
+\usepackage{amsmath,amsfonts,amsmath,amssymb,times}
+\usepackage{txfonts}
+\usepackage{enumerate}% 编号
+\usepackage{tikz,pgfplots} %绘图
+\usepackage{tkz-euclide,pgfplots}
+\usetikzlibrary{automata,positioning}
+\usepackage[paperwidth=18.4cm,paperheight=26cm,top=1.5cm,bottom=2cm,right=2cm]{geometry} % 单页
+%\usepackage[paperwidth=36.8cm,paperheight=26cm,top=2.5cm,bottom=2cm,right=2cm]{geometry}
+%\lstset{language=C,keywordstyle=\color{red},showstringspaces=false,rulesepcolor=\color{green}}
+%\oddsidemargin=0.5cm   %奇数页页边距
+%\evensidemargin=0.5cm %偶数页页边距
+%%\textwidth=14.5cm        %文本的宽度 单页
+%\textwidth=30cm        %文本的宽度 单页
+
+\newsavebox{\zdx}%装订线
+
+\newcommand{\putzdx}{\marginpar{
+		\parbox{1cm}{\vspace{-1.6cm}
+			\rotatebox[origin=c]{90}{
+				\usebox{\zdx}
+		}}
+}}
+
+\newcommand{\blank}{\uline{\textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}\ \textcolor{white}{a}}}
+
+\newcommand{\me}{\mathrm{e}}  %定义 对数常数e，虚数符号i,j以及微分算子d为直立体。
+\newcommand{\mi}{\mathrm{i}}
+\newcommand{\mj}{\mathrm{j}}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\bs}{\boldsymbol}%数学黑体
+\newcommand{\ds}{\displaystyle}
+%通常我们使用的分数线是系统自己定义的分数线，即分数线的长度的预设值是分子或分母所占的最大宽度，如何让分数线的长度变长成，我们%可以在分子分母添加间隔来实现。如中文分式的命令可以定义为：
+%\newcommand{\chfrac[2]}{\cfrac{\;#1\;}{\;#2\;}}
+%\frac{1}{2} \qquad \chfrac{1}{2}
+
+%选择题
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{3.5cm}}}(A)~#1 & (B)~#2 & (C)~#3 & (D)~#4\end{tabular}} % 四行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{7cm}}}(A)~#1 & (B)~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{7cm}}}(C)~#3 &
+		(D)~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\(A)~#1 \\ (B)~#2 \\ (C)~#3 \\ (D)~#4}  % 一行
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\begin{document} % 在begin前面加了一个空格以免出现显示错误，编译时应该去掉
+%\fancyhf{}
+%\fancyfoot[CO,CE]{\vspace*{1mm}第\,\thepage\,页 , 共 ~\pageref{LastPage} 页}
+%\sbox{\zdx}
+%{\parbox{27cm}{\centering
+%	座位号~\underline{\makebox[34mm][c]{}}~ 班~级\underline{\makebox[34mm][c]{}}~\CJKfamily{song} 学~号\underline{\makebox[44mm][c]{}}~\CJKfamily{song} 姓~名\underline{\makebox[34mm][c]{}} ~\\
+%	\vspace{3mm}
+%请在所附答题纸上空出密封位置。并填写试卷序号、班级、学号和 姓名\\
+%%答题时学号
+%\vspace{1mm}
+%\dotfill{} 密\dotfill{}封\dotfill{}线\dotfill{} \\
+%	}}
+%	\reversemarginpar
+	
+\begin{spacing}{1.25}
+	\begin{center}
+\begin{LARGE}
+
+~\underline{~2018 }\,年~\underline{小学数学}\,某大附中招生测试试卷\\
+
+\end{LARGE}
+\vspace{0.3cm}
+(闭卷笔试\ \ 90 分钟)\\
+	\vspace{0.5cm}
+\begin{tabular}{|m{0.05\textwidth}|*{7}{m{0.05\textwidth}|}p{0.2\textwidth}|}
+	\hline
+\centering  题~号 & \centering 一 & \centering 二 & \centering 三 & \centering 四& \centering 五 & \centering 六 %& \centering 七 % & \centering 八 & \centering 九 & \centering 十
+& \centering 总~分 & \makecell{阅卷教师} \rule{0pt}{3mm} \\
+	\hline
+	\centering 分~数 &  &  &  &  &  &  &  &  %&  &  &
+	\rule{0pt}{8mm} \\\hline
+				% \centering 计 &  &  &  &  &  &  &  &  &  &  & \\
+				% \centering 分 &  &  &  &  &  &  &  &  &  &  & \\
+				% \centering 人 &  &  &  &  &  &  &  &  &  &  & \\  \hline
+\end{tabular}
+\end{center}
+\end{spacing}
+\vspace{-0.5cm}
+\setlength{\marginparsep}{1.7cm}
+\putzdx %%装订线--奇页数
+
+\section*{\hspace{5cm} 一、填空题~(每题~2 分, 共~ 20 分)}
+\vspace{-1cm}
+
+\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			\centering 阅卷人& \\
+			\hline
+			\centering 得~~分 &  \\
+			\hline
+		\end{tabular}
+		\begin{enumerate}\setcounter{enumi}{0}
+			\item $M*N~$表示$(M+N)~\div~2$，则(2017*2019)*2018= ~\underline{~~~~~~~~~~~~~}.
+			
+			\item 甲、乙两包糖的质量比是4：1，如果从甲包中取出13克放入乙包后，甲、乙两包糖的质量比是7：5，那么两包糖质量的总和是\underline{~~~~~~~~~~~~~}克.
+			
+			\item 将底面半径4分米，高3分米的圆柱形木料做成最大的圆锥，被切割掉的部分的体积是\underline{~~~~~~~~~~~~~}立方分米.
+			
+            \item 快、慢两车同时从甲、乙两地相对而行，经过6小时候在离终点40千米处两车相遇，相遇后两车仍以原速度行驶，快车又用4小时到达乙地，甲、乙两地的路程是\underline{~~~~~~~~~~~~~}千米.
+			
+			\item 一个正方体的表面积是$a~cm^2$,体积是$a~cm^3$，整个正方体的棱长是\underline{~~~~~~~~~~~~~}.
+
+            \item 把浓度为95\%的究竟600毫升，稀释成浓度为75\%的酒精，需要加入\underline{~~~~~~~~~~~~~}毫升蒸馏水.
+
+            \item 原计划从甲地到乙地每隔40米安装一根电线杆，加上两端共需61根；现在改成每隔60米安装一个电线杆，则需要购买\underline{~~~~~~~~~~~~~}根电线杆.
+
+            \item 把$\dfrac{6}{7}$的分子减去3，要使分数的小小不变，分母应该减去\underline{~~~~~~~~~~~~~}.
+
+            \item 在60.6千克药水中，药粉和谁的比是1：100，其中药粉有\underline{~~~~~~~~~~~~~}千克.
+
+            \item 天平一端放着3块巧克力，另一端放着$\dfrac{1}{2}$块巧克力和60克的砝码，这是天平正好平衡，则一块巧克力重\underline{~~~~~~~~~~~~~}克.
+
+		\end{enumerate}
+\newpage
+
+\vspace{1cm}
+	\begin{spacing}{1.3}
+		
+		\section*{\hspace{5cm} 二、选择题~(每题~2 分，共~10 分)}
+		\vspace{-1cm}
+		\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			\centering 阅卷人& \\
+			\hline
+			\centering 得~~分 &  \\
+			\hline
+		\end{tabular}
+		
+\begin{enumerate}\setcounter{enumi}{10}
+\vspace{0.3cm}
+
+\item 一桶牛奶，喝了它的~$\dfrac{3}{5}$还多0.5升，这时还剩下3.5升，求这桶牛奶原有多少升？正确的列式是（~~~~）.
+\twoch{3.5$~\div~$(1~-~$\dfrac{3}{5}$)}{(3.5~+~0.5)$~\div~(1-\dfrac{3}{5}$)}{3.5$~\div(1-\dfrac{3}{5})~$-0.5}{3.5$~\div\dfrac{3}{5}~$}
+
+\item 用3、4、5、6中任意两个数组成互质数，可组成（~~~~~）.
+\fourch{1对}{2对}{3对}{4对}
+
+\item 足球门票50元一张，降价后观众增加2/3，收入增加1/6，一张门票降价（~~~~）.
+\fourch{12}{15}{14}{18}
+
+\item 把一张长90cm，宽42cm的长方形铁板简称边长都是整厘米，面积都相等的小正方形铁片，恰好无剩余，至少要剪（~~~~）块.
+\fourch{100}{105}{110}{108}
+
+\item 已知x,y都是自然数，并且$\dfrac{x}{5}+\dfrac{y}{7}=\dfrac{43}{35}$, 那么x+y的值是(~~~~).
+\fourch{6}{7}{8}{9}
+
+			
+\end{enumerate}
+
+\section*{\hspace{4.5cm} 三、判断题:~正确$\surd$, 错误$\times$ (共~5分)}
+\vspace{-1cm}
+\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+\centering 阅卷人& \\
+\hline
+\centering 得~~分 &  \\
+	\hline
+\end{tabular}
+\vspace{0.3cm}
+\begin{enumerate}\setcounter{enumi}{15}
+			
+\item 某种手机的价格先降价5\%,又降价10\%,现价是原价的85\%.\hfill(~~~~~~~~)
+\item 在含盐量为30\%的盐水先加7克水，再加3克盐，含盐量增大. \hfill(~~~~~~~~)
+\item 周长相等的正方形和圆，正方形的面积比圆的面积小. \hfill(~~~~~~~~)
+\item 把一个长方形的框架拉成一个平行四边形，他的面积不变，周长变小.\hfill(~~~~~~~~)
+\item 一个小数精确到百分位是8.60，那么这个小数最大是8.599.\hfill(~~~~~~~~)		
+\end{enumerate}
+
+\newpage
+		\putzdx %%装订线--奇页数
+		
+		\section*{\hspace{5cm} 四、计算题~(每题~5分, 共~20分)}
+		\vspace{-1cm}
+		\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			\centering  阅卷人&  \\
+			\hline
+			\centering 得~~分 &  \\
+			\hline
+		\end{tabular}
+		\begin{enumerate}\setcounter{enumi}{20}
+		
+        \item $15\times\dfrac{1}{4}\times0.25+58\times25\%$.
+
+
+		解:
+        \vspace{2.5cm}
+
+        \item  $2-[1-(\dfrac{3}{4}-\dfrac{3}{4}\div\dfrac{12}{5})]\div\dfrac{7}{8}$.
+
+
+		解:
+        \vspace{2.5cm}
+
+
+        \item $\dfrac{2\times2}{1\times3}+\dfrac{4\times4}{3\times5}+\dfrac{6\times6}{5\times7}+\dfrac{8\times8}{7\times9}+\dfrac{10\times10}{9\times11}$.
+			
+        解：
+        \vspace{2.5cm}
+
+         \item $\dfrac{1}{6}+\dfrac{1}{24}+\dfrac{1}{60}+\dfrac{1}{120}+\dfrac{1}{210}$.
+			
+        解：
+        \vspace{2.5cm}
+\end{enumerate}
+\newpage
+\section*{\hspace{5cm} 五、面积计算~(每题~5 分, 共~ 10 分)}
+\vspace{-1cm}
+\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+\centering 阅卷人& \\
+\hline
+\centering 得~~分 &  \\
+\hline
+\end{tabular}
+		
+		\begin{enumerate}\setcounter{enumi}{24}
+			\item 如下图所示，梯形面积是70平方厘米，下底是13厘米，求阴影部分的面积（$\pi$取3）.
+			
+			解：
+            \vspace{2.5cm}
+			
+			\item 下图中$\Delta ABC$被线段$ED$分成甲、乙两部分，$AE=\dfrac{2}{5}AB,BD=\dfrac{1}{4}BC.$,请问：甲、乙两部分的面积比是多少？
+
+           解：
+            \vspace{2.5cm}
+			
+
+			
+		\end{enumerate}
+		\newpage
+		\putzdx %%装订线--奇数页
+		\section*{\hspace{5cm} 六、应用题~(每题~7 分，共~35分)}
+		\vspace{-1cm}
+		\begin{tabular}{|p{0.1\textwidth}|p{0.08\textwidth}|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			\centering  阅卷人& \\
+			\hline
+			\centering 得~~分 &  \\
+			\hline
+		\end{tabular}
+
+		\begin{enumerate}\setcounter{enumi}{26}
+
+			\item 甲乙两个仓库共有粮食600吨，如果从甲仓库调出10\%,送入乙仓库后，甲、乙仓库的粮食质量比是3:2.求甲、乙两个仓库原来各有粮食多少吨？
+			
+           解：
+            \vspace{3.5cm}
+
+            \item 六年级三个班植树，任务分配是：甲班要植三个班植树总数的40\%，乙、丙两班植树棵数的比是5:2.当甲班植树200颗时，正好完成三个半植树总棵树的$\dfrac{2}{7}$.丙班应植树多少棵？
+
+           解：
+            \vspace{3.5cm}
+
+            \item  甲乙两人分别从A、B两地同时出发，相向而行，出发时速度比是5:3,第一次相遇后，甲提速20\%,乙提速30\%，这样当甲到达B地时，乙离A地还有183千米，那么A、B两地之间的距离多少？
+		\end{enumerate}
+	
+
+	\end{spacing}
+\newpage
+
+\begin{enumerate}\setcounter{enumi}{29}
+
+
+			\item 甲有若干本书，乙借走了一半加3本，剩下的书，丙借走了1/3加2本，再剩下的书丁借走了1/2加三本，最后甲还有5本书，甲原来有多少本书？
+			
+           解：
+            \vspace{3.5cm}
+
+            \item 甲与乙班学生同时从学校出发去牧野公园，学校距公园57千米，甲班步行的速速是每小时7千米，乙班步行的速度是每小时9千米。学校有一辆汽车，它的速度是每小时63千米，这辆汽车恰好能坐一个班的学生，为了使两个班学生在最短时间内同时到达公园，那么甲班学生需要步行的距离是多少千米？
+
+           解：
+            \vspace{3.5cm}
+
+            \item  甲、乙、丙三个人，甲每分钟行走120米，乙每分钟行走100米，丙每分钟行走70米，如果三人同时同向，从同地出发，沿周长是300米的圆形跑道行走，那几分钟之后，三个人又可以相聚？
+		\end{enumerate}
+	\clearpage
+	
+\end{document}

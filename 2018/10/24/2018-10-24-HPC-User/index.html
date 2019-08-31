@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI,HPC,lsf," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="二尺九五博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="初学者必备命令：yppasswd：修改密码 module load anaconda/3.5.0.1  source activate tensorflow bsub -q nc -n 1 -o %J.log -e %J.err python test31.py  bjobs 作业管理系统LSF常用命令：bsub：提交作业 bhosts：显示指定节点状态，默认显示全部节点状态 bjobs：显示用户">
+<meta name="keywords" content="AI,HPC,lsf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPC使用说明">
+<meta property="og:url" content="https://2c95.github.io/2018/10/24/2018-10-24-HPC-User/index.html">
+<meta property="og:site_name" content="二尺九五博客">
+<meta property="og:description" content="初学者必备命令：yppasswd：修改密码 module load anaconda/3.5.0.1  source activate tensorflow bsub -q nc -n 1 -o %J.log -e %J.err python test31.py  bjobs 作业管理系统LSF常用命令：bsub：提交作业 bhosts：显示指定节点状态，默认显示全部节点状态 bjobs：显示用户">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-24T10:58:04.363Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HPC使用说明">
+<meta name="twitter:description" content="初学者必备命令：yppasswd：修改密码 module load anaconda/3.5.0.1  source activate tensorflow bsub -q nc -n 1 -o %J.log -e %J.err python test31.py  bjobs 作业管理系统LSF常用命令：bsub：提交作业 bhosts：显示指定节点状态，默认显示全部节点状态 bjobs：显示用户">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://2c95.github.io/2018/10/24/2018-10-24-HPC-User/"/>
+
+
+
+
+
+  <title>HPC使用说明 | 二尺九五博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">二尺九五博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">瘦一点，再瘦一点</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-日程">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-地图">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            地图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://2c95.github.io/2018/10/24/2018-10-24-HPC-User/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="二尺九五">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二尺九五博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HPC使用说明</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-24T00:00:00+08:00">
+                2018-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="初学者必备命令："><a href="#初学者必备命令：" class="headerlink" title="初学者必备命令："></a>初学者必备命令：</h2><pre><code>yppasswd：修改密码
+module load anaconda/3.5.0.1 
+source activate tensorflow
+bsub -q nc -n 1 -o %J.log -e %J.err python test31.py 
+bjobs
+</code></pre><h2 id="作业管理系统LSF常用命令："><a href="#作业管理系统LSF常用命令：" class="headerlink" title="作业管理系统LSF常用命令："></a>作业管理系统LSF常用命令：</h2><pre><code>bsub：提交作业
+bhosts：显示指定节点状态，默认显示全部节点状态
+bjobs：显示用户作业信息
+bkill：杀掉指定的作业
+bmod：更改已提交作业的参数
+bpeek：显示处于运行时作业的标准输出和标准错误输出信息
+bqueues：显示作业队列信息
+lsload：显示节点当前负载
+</code></pre><hr>
+<h2 id="队列设置："><a href="#队列设置：" class="headerlink" title="队列设置："></a>队列设置：</h2><pre><code>本系统设置有以下队列，使用限制与说明如下：
+物理学院:phy_long、phy_7days、phy_1day、phy_largemem、phy_gpu、phy_1day_gpu；
+(说明：long不限时长；7days作业只运行7天；1day作业只运行1天；largemem作业优先级低于gpu队列，gpu作业优先运行.)
+化学学院:chem；
+数学学院:math。
+其他学院:other。
+默认对列为nc，所有学院均可以使用。
+</code></pre><h2 id="命令bqueues-l-队列名-可查看各队列详细设置。"><a href="#命令bqueues-l-队列名-可查看各队列详细设置。" class="headerlink" title="  命令bqueues -l 队列名:可查看各队列详细设置。"></a>  命令bqueues -l 队列名:可查看各队列详细设置。</h2><h2 id="启用环境设置module。参见：http-www-htu-edu-cn-hpcc"><a href="#启用环境设置module。参见：http-www-htu-edu-cn-hpcc" class="headerlink" title="启用环境设置module。参见：http://www.htu.edu.cn/hpcc/"></a>启用环境设置module。参见：<a href="http://www.htu.edu.cn/hpcc/" target="_blank" rel="noopener">http://www.htu.edu.cn/hpcc/</a></h2><pre><code>常用命令:
+module： 查看帮助
+module help： 查看帮助 等价于 module -h 查看帮助
+module avail： 查看可用模块
+module list： 查看已经加载的模块
+module add |load &lt; 模块名 &gt; ：#加载模块 
+比如：module load MaterialsStudio/2017  #将MaterialsStudio/2017加载到环境中
+module rm |unload &lt; 模块名 &gt; ：#卸载模块 
+比如：module unload MaterialsStudio/2017 #将MaterialsStudio/2017从用户环境中卸载
+module purge ：#卸载所有模块
+module switch |swap&lt; 旧模块 &gt; &lt; 新模块 &gt;：  #替换模块  
+比如：module swap intel/11.1.072 intel/2015_update3 #将环境变量中intel/11.1.072替换成intel/2015_update3 
+module whatis &lt; 模块名 &gt; ：#查看模块说明
+module show |display &lt; 模块名 &gt;：  #查看模块内容
+
+如不想每次都手动加，可将其设置在/̃.bashrc或/̃.modulerc文件中：：
+• /̃.bashrc，只Bash启动时设置：
+  module load intel/2015_update3
+• /̃.modulerc，每次module命令启动时都设置（注意第一行#%Module1.0是需要的。）：
+  #%Module1.0
+  module load intel/2015_update3 
+</code></pre><hr>
+<h2 id="作业提交举例"><a href="#作业提交举例" class="headerlink" title="作业提交举例:"></a>作业提交举例:</h2><p>  1、提交一个16进程的并行作业job_example到math队列上运行：<br>     bsub -q math -n 16 -o %J.log -e %J.err mpirun ./jobs_example<br>  2、高斯g09作业提交（-n参数值要与输入文件中nproc值保持一致、高斯只能单节点内并行计算）：<br>     bsub -q math -n 16 -o %J.log -e %J.err g09 123.com<br>  3、提交一个宽范围进程数的并行作业job_example到normal队列上运行，满足-n范围内的条件即分配运行：<br>     bsub -q math -n 16,192 -o %J.log -e %J.err mpirun ./jobs_example<br>     %J会自动被作业调度系统替换成作业号，-o和-e分别指定存储正常屏幕输出和出错屏幕输出时的文件，可以根据此两个文件判断程序运行时出现的问题。<br>  4、Materials Studio作业提交：（以 CASTEP 模块输入文件为例）<br>     RunCASTEP.sh -q normal -np 16 seedfile<br>     Dmol3 等模块方法同上。-np 指定提交的作业使用的进程数。seedfile 请替换为自己实际提交计算作业时的种子文件名。<br>  5、matlab作业提交：（jobname.m,”.m”不需要加）<br>     bsub -q phy_1day -n 16 -o %J.log -e %J.err matlab -r jobname<br>  6、GPU资源作业提交：<br>      bsub -q phy_gpu -R “select [ngpus&gt;0] rusage [ngpus_shared=4]” mpirun ./jobs_example    #GPU共享模式，作业运行可运行在该节点的4GPU核心<br>      bsub -q phy_gpu -n 4 -R “select [ngpus&gt;0] rusage [ngpus_shared=4] span[hosts=1]” mpirun ./jobs_example     #GPU共享模式该节点的4GPU核心，作业运行在1个节点，共使用4CPU核心</p>
+<pre><code>bsub -q phy_gpu -n 4 -R &quot;select [ngpus&gt;0] rusage [ngpus_shared=4] span[ptile=2]&quot; mpirun ./jobs_example    #GPU共享模式该节点的4GPU核心，作业运行在2个节点，每个节点使用2核心，共使用4CPU核心
+</code></pre><hr>
+<h2 id="GPU节点设置说明："><a href="#GPU节点设置说明：" class="headerlink" title="GPU节点设置说明："></a>GPU节点设置说明：</h2><pre><code>A、设置三个队列共用12个GPU节点：
+   1、GPU作业队列phy_gpu。2、GPU作业队列phy_1day_gpu。3、大内存作业队列phy_largemem。
+B、单个GPU节点上：
+    phy_gpu队列，可运行2个作业。单个作业可使用1-28个cpu核心，最多256G内存。
+    phy_1day_gpu队列。单个作业可使用1-28个cpu核心，最多256G内存。
+    phy_largemem队列。单个作业可使用1-28个cpu核心，最多256G内存。
+C、如果两个gpu队列作业需求不足，则把phy_largemem队列作业挂起（SSUSP）。
+    因此建议使用phy_largemem队列的用户，提交宽范围进程数的并行作业，以便快速开始计算。
+    bsub -q phy_largemem -n 4,28 -o %J.log -e %J.err mpirun ./jobs_example
+</code></pre><hr>
+<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p>  1、密码错误超过十次，该ip将锁定一天。<br>  2、禁止在登陆节点下进行运算。<br>  3、每位用户运行作业（run）cpu48核。提交作业（NJOBS）最大可提交cpu总数64核。通过命令‘busers’ 可以查看到该项限制信息。按照各节点负载情况，动态来分配节点。<br>  4、启用公平调度策略，各用户按照1：1平均占用资源，同时动态调整优先级，即用户作业跑的越多资源用的越多，动态优先级就越低，别的用户的作业就会优先被执行。</p>
+<h2 id="5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。"><a href="#5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。" class="headerlink" title="  5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。"></a>  5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。</h2><p>  计算软件相关：<br>  一、建议使用module加载所需编译及MPI环境（具体使用方法man module或见上方module使用常见命令）。<br>  二、为了使计算集群更好的服务用户，每个课题组都指定了一位计算软件管理老师，分配了相应管理权限:王天兴，路战胜，马春旺，翟红生，马恒，曹益林，麻娜娜，周传江。如果想增加module软件或者有问题，请先联系本课题组软件负责老师。计算软件版权问题自负。<br>  三、请自行下载备份集群上重要的文件，本中心仅提供计算服务，不提供用户文件的备份、恢复服务。  </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    二尺九五
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://2c95.github.io/2018/10/24/2018-10-24-HPC-User/" title="HPC使用说明">https://2c95.github.io/2018/10/24/2018-10-24-HPC-User/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://2c95.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+            <a href="/tags/HPC/" rel="tag"># HPC</a>
+          
+            <a href="/tags/lsf/" rel="tag"># lsf</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/23/2018-10-23-sec-ai-2/" rel="next" title="对AI应用于网络安全的正确认识">
+                <i class="fa fa-chevron-left"></i> 对AI应用于网络安全的正确认识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/25/2018-10-25-DeepLearning-tools/" rel="prev" title="历年来那些与网络安全中机器学习相关最好的工具与资源">
+                历年来那些与网络安全中机器学习相关最好的工具与资源 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="二尺九五" />
+            
+              <p class="site-author-name" itemprop="name">二尺九五</p>
+              <p class="site-description motion-element" itemprop="description">公众号：二尺九五</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初学者必备命令："><span class="nav-number">1.</span> <span class="nav-text">初学者必备命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作业管理系统LSF常用命令："><span class="nav-number">2.</span> <span class="nav-text">作业管理系统LSF常用命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#队列设置："><span class="nav-number">3.</span> <span class="nav-text">队列设置：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令bqueues-l-队列名-可查看各队列详细设置。"><span class="nav-number">4.</span> <span class="nav-text">  命令bqueues -l 队列名:可查看各队列详细设置。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用环境设置module。参见：http-www-htu-edu-cn-hpcc"><span class="nav-number">5.</span> <span class="nav-text">启用环境设置module。参见：http://www.htu.edu.cn/hpcc/</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作业提交举例"><span class="nav-number">6.</span> <span class="nav-text">作业提交举例:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPU节点设置说明："><span class="nav-number">7.</span> <span class="nav-text">GPU节点设置说明：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项："><span class="nav-number">8.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。"><span class="nav-number">9.</span> <span class="nav-text">  5、每个核允许一个作业窗口，不允许作业调度系统将一个核分给两个进程用。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">二尺九五</span>
+<a href="http://www.miitbeian.gov.cn/">豫ICP备18040558号</a> 
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="网络安全,机器学习," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="二尺九五博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="历年来那些与网络安全中机器学习相关最好的工具与资源 目录 数据集 论文 书籍 演讲 教程 课程 杂项  ↑ 贡献↑ 数据集 安全相关数据样本集 DARPA 入侵检测数据集 Stratosphere IPS 数据集 开放数据集 NSA 的数据捕获 ADFA 入侵检测数据集 NSL-KDD 数据集 恶意 URL 数据集 多源安全事件数据集 恶意软件训练集 KDD Cup 1999 数据集 Web 攻击">
+<meta name="keywords" content="网络安全,机器学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="历年来那些与网络安全中机器学习相关最好的工具与资源">
+<meta property="og:url" content="https://2c95.github.io/2018/10/25/2018-10-25-DeepLearning-tools/index.html">
+<meta property="og:site_name" content="二尺九五博客">
+<meta property="og:description" content="历年来那些与网络安全中机器学习相关最好的工具与资源 目录 数据集 论文 书籍 演讲 教程 课程 杂项  ↑ 贡献↑ 数据集 安全相关数据样本集 DARPA 入侵检测数据集 Stratosphere IPS 数据集 开放数据集 NSA 的数据捕获 ADFA 入侵检测数据集 NSL-KDD 数据集 恶意 URL 数据集 多源安全事件数据集 恶意软件训练集 KDD Cup 1999 数据集 Web 攻击">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+<meta property="og:updated_time" content="2018-10-25T03:34:25.648Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="历年来那些与网络安全中机器学习相关最好的工具与资源">
+<meta name="twitter:description" content="历年来那些与网络安全中机器学习相关最好的工具与资源 目录 数据集 论文 书籍 演讲 教程 课程 杂项  ↑ 贡献↑ 数据集 安全相关数据样本集 DARPA 入侵检测数据集 Stratosphere IPS 数据集 开放数据集 NSA 的数据捕获 ADFA 入侵检测数据集 NSL-KDD 数据集 恶意 URL 数据集 多源安全事件数据集 恶意软件训练集 KDD Cup 1999 数据集 Web 攻击">
+<meta name="twitter:image" content="http://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://2c95.github.io/2018/10/25/2018-10-25-DeepLearning-tools/"/>
+
+
+
+
+
+  <title>历年来那些与网络安全中机器学习相关最好的工具与资源 | 二尺九五博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">二尺九五博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">瘦一点，再瘦一点</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-日程">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-地图">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            地图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://2c95.github.io/2018/10/25/2018-10-25-DeepLearning-tools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="二尺九五">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="二尺九五博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">历年来那些与网络安全中机器学习相关最好的工具与资源</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T00:00:00+08:00">
+                2018-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>历年来那些与网络安全中机器学习相关最好的工具与资源</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#-datasets">数据集</a></li>
+<li><a href="#-papers">论文</a></li>
+<li><a href="#-books">书籍</a></li>
+<li><a href="#-talks">演讲</a></li>
+<li><a href="#-tutorials">教程</a></li>
+<li><a href="#-courses">课程</a></li>
+<li><a href="#-miscellaneous">杂项</a></li>
+</ul>
+<h2 id="↑-贡献"><a href="#↑-贡献" class="headerlink" title="↑ 贡献"></a><a href="#table-of-contents">↑</a> 贡献</h2><h2 id="↑-数据集"><a href="#↑-数据集" class="headerlink" title="↑ 数据集"></a><a href="#table-of-contents">↑</a> 数据集</h2><ul>
+<li><a href="http://www.secrepo.com/" target="_blank" rel="noopener">安全相关数据样本集</a></li>
+<li><a href="https://www.ll.mit.edu/ideval/data/" target="_blank" rel="noopener">DARPA 入侵检测数据集</a></li>
+<li><a href="https://stratosphereips.org/category/dataset.html" target="_blank" rel="noopener">Stratosphere IPS 数据集</a></li>
+<li><a href="http://csr.lanl.gov/data/" target="_blank" rel="noopener">开放数据集</a></li>
+<li><a href="http://www.westpoint.edu/crc/SitePages/DataSets.aspx" target="_blank" rel="noopener">NSA 的数据捕获</a></li>
+<li><a href="https://www.unsw.adfa.edu.au/australian-centre-for-cyber-security/cybersecurity/ADFA-IDS-Datasets/" target="_blank" rel="noopener">ADFA 入侵检测数据集</a></li>
+<li><a href="https://github.com/defcom17/NSL_KDD" target="_blank" rel="noopener">NSL-KDD 数据集</a></li>
+<li><a href="http://sysnet.ucsd.edu/projects/url/" target="_blank" rel="noopener">恶意 URL 数据集</a></li>
+<li><a href="http://csr.lanl.gov/data/cyber1/" target="_blank" rel="noopener">多源安全事件数据集</a></li>
+<li><a href="http://marcoramilli.blogspot.cz/2016/12/malware-training-sets-machine-learning.html" target="_blank" rel="noopener">恶意软件训练集</a></li>
+<li><a href="http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html" target="_blank" rel="noopener">KDD Cup 1999 数据集</a></li>
+<li><a href="https://github.com/foospidy/payloads" target="_blank" rel="noopener">Web 攻击载荷</a></li>
+<li><a href="https://github.com/faizann24/Fwaf-Machine-Learning-driven-Web-Application-Firewall" target="_blank" rel="noopener">WAF 恶意请求数据集</a></li>
+<li><a href="https://github.com/marcoramilli/MalwareTrainingSets" target="_blank" rel="noopener">恶意软件训练数据集</a></li>
+<li><a href="https://github.com/jzadeh/Aktaion/tree/master/data" target="_blank" rel="noopener">Aktaion 数据集</a></li>
+<li><a href="https://www.dropbox.com/sh/7fo4efxhpenexqp/AADHnRKtL6qdzCdRlPmJpS8Aa/CRIME?dl=0" target="_blank" rel="noopener">DeepEnd 研究中的犯罪数据集</a></li>
+<li><a href="http://www.netresec.com/?page=PcapFiles" target="_blank" rel="noopener">公开可用的 PCAP 文件数据集</a></li>
+<li><a href="https://plg.uwaterloo.ca/~gvcormac/treccorpus07/" target="_blank" rel="noopener">2007年TREC公开垃圾邮件全集</a></li>
+<li><a href="https://www.sec.cs.tu-bs.de/~danarp/drebin/" target="_blank" rel="noopener">Drebin 安卓恶意软件数据集</a></li>
+<li><a href="https://monkey.org/~jose/phishing/" target="_blank" rel="noopener">PhishingCorpus 数据集</a></li>
+</ul>
+<h2 id="↑-论文"><a href="#↑-论文" class="headerlink" title="↑ 论文"></a><a href="#table-of-contents">↑</a> 论文</h2><ul>
+<li><a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/melicher" target="_blank" rel="noopener">快速、可靠、准确：使用神经网络建模猜测密码</a></li>
+<li><a href="http://ieeexplore.ieee.org/document/5504793/?reload=true" target="_blank" rel="noopener">封闭世界之外，应用机器学习在网络入侵检测</a></li>
+<li><a href="https://link.springer.com/chapter/10.1007/978-3-540-30143-1_11" target="_blank" rel="noopener">基于 Payload 的异常网络入侵检测</a></li>
+<li><a href="http://dl.acm.org/citation.cfm?id=2420987" target="_blank" rel="noopener">使用元数据与结构特征检测恶意 PDF</a></li>
+<li><a href="https://dl.acm.org/citation.cfm?id=2339697" target="_blank" rel="noopener">对抗性支持向量机学习</a></li>
+<li><a href="https://dl.acm.org/citation.cfm?id=1387709.1387716" target="_blank" rel="noopener">利用机器学习颠覆垃圾邮件过滤器</a></li>
+<li><a href="http://www.covert.io/research-papers/security/CAMP%20-%20Content%20Agnostic%20Malware%20Protection.pdf" target="_blank" rel="noopener">CAMP – 内容不可知的恶意软件保护</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Notos%20-%20Building%20a%20dynamic%20reputation%20system%20for%20dns.pdf" target="_blank" rel="noopener">Notos – 构建动态 DNS 信誉系统</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Kopis%20-%20Detecting%20malware%20domains%20at%20the%20upper%20dns%20hierarchy.pdf" target="_blank" rel="noopener">Kopis – 在 DNS 上层结构中检测恶意软件的域名</a></li>
+<li><a href="http://www.covert.io/research-papers/security/From%20throw-away%20traffic%20to%20bots%20-%20detecting%20the%20rise%20of%20dga-based%20malware.pdf" target="_blank" rel="noopener">Pleiades – 检测基于 DGA 的恶意软件的崛起</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Exposure%20-%20Finding%20malicious%20domains%20using%20passive%20dns%20analysis.pdf" target="_blank" rel="noopener">EXPOSURE – 使用被动 DNS 分析找到恶意域名</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Polonium%20-%20Tera-Scale%20Graph%20Mining%20for%20Malware%20Detection.pdf" target="_blank" rel="noopener">Polonium – 恶意软件检测中万亿级图计算挖掘</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Nazca%20-%20%20Detecting%20Malware%20Distribution%20in%20Large-Scale%20Networks.pdf" target="_blank" rel="noopener">Nazca – 在大规模网络中检测恶意软件分布</a></li>
+<li><a href="http://www.covert.io/research-papers/security/PAYL%20-%20Anomalous%20Payload-based%20Network%20Intrusion%20Detection.pdf" target="_blank" rel="noopener">PAYL – 基于 Payload 的网络异常入侵检测</a></li>
+<li><a href="http://www.covert.io/research-papers/security/Anagram%20-%20A%20Content%20Anomaly%20Detector%20Resistant%20to%20Mimicry%20Attack.pdf" target="_blank" rel="noopener">Anagram – 用于对抗模仿攻击的内容异常检测</a></li>
+<li><a href="https://www.researchgate.net/publication/283083699_Applications_of_Machine_Learning_in_Cyber_Security" target="_blank" rel="noopener">在网络安全中应用机器学习</a></li>
+<li><a href="http://vak.ed.gov.ru/az/server/php/filer.php?table=att_case&amp;fld=autoref&amp;key%5B%5D=100003407" target="_blank" rel="noopener">用数据挖掘构建网络入侵检测系统(RUS)</a></li>
+<li><a href="http://engjournal.ru/articles/987/987.pdf" target="_blank" rel="noopener">数据挖掘在企业网络中构建入侵检测系统 (RUS)</a></li>
+<li><a href="http://engjournal.ru/articles/534/534.pdf" target="_blank" rel="noopener">应用神经网络在计算机安全任务分层 (RUS)</a></li>
+<li><a href="http://vestnik.sibsutis.ru/uploads/1459329553_3576.pdf" target="_blank" rel="noopener">数据挖掘技术与入侵检测 (RUS)</a></li>
+<li><a href="http://elib.bsu.by/bitstream/123456789/120105/1/v17no3p284.pdf" target="_blank" rel="noopener">网络入侵检测系统中的降维</a></li>
+<li><a href="https://www.nccgroup.trust/globalassets/our-research/uk/whitepapers/2017/rise-of-the-machines-preliminaries-wp-new-template-final_web.pdf" target="_blank" rel="noopener">机器的兴起：机器学习与其在网络安全中的应用</a></li>
+<li><a href="https://go.recordedfuture.com/hubfs/white-papers/machine-learning.pdf" target="_blank" rel="noopener">网络安全中的机器学习：半人马纪元</a></li>
+<li><a href="https://www.cs.virginia.edu/~evans/pubs/ndss2016/" target="_blank" rel="noopener">自动逃避分类：PDF 恶意软件分类案例研究</a></li>
+<li><a href="https://www.blackhat.com/docs/us-16/materials/us-16-Seymour-Tully-Weaponizing-Data-Science-For-Social-Engineering-Automated-E2E-Spear-Phishing-On-Twitter.pdf" target="_blank" rel="noopener">社会工程在数据科学的武器化-在 Twitter 上实现自动 E2E 鱼叉钓鱼</a></li>
+<li><a href="https://www.countercept.com/assets/Uploads/whitepapers/MWRI-Countercept-Machine-Learning-Whitepaper-2017-04-01.pdf" target="_blank" rel="noopener">机器学习：威胁狩猎的现实检查</a></li>
+<li><a href="https://arxiv.org/abs/1708.06525" target="_blank" rel="noopener">基于神经网络图嵌入的跨平台二进制程序代码相似度检测</a></li>
+<li><a href="https://eprint.iacr.org/2017/281.pdf" target="_blank" rel="noopener">整合隐私保护机器学习的实用安全</a></li>
+<li><a href="https://acmccs.github.io/papers/p1285-duA.pdf" target="_blank" rel="noopener">DeepLog：基于深度学习的系统日志异常检测与诊断</a></li>
+<li><a href="https://arxiv.org/pdf/1702.08568.pdf" target="_blank" rel="noopener">eXpose：带有嵌入的字符级CNN，用于检测恶意 URL、文件路径与注册表</a></li>
+<li><a href="http://cyberrus.com/wp-content/uploads/2018/02/2-16-524-17_1.-Kotenko.pdf" target="_blank" rel="noopener">基于 Event Type Accounting (RUS)、用于安全事件关联的大数据技术</a></li>
+<li><a href="http://cyberrus.com/wp-content/uploads/2018/02/23-29-524-17_3.-Tarasov.pdf" target="_blank" rel="noopener">使用神经网络来检测应用级别的低强度拒绝服务攻击的调查</a></li>
+<li><a href="https://arxiv.org/pdf/1804.04177.pdf" target="_blank" rel="noopener">使用深度神经网络检测恶意 PowerShell 命令</a></li>
+<li><a href="https://arxiv.org/pdf/1804.04159.pdf" target="_blank" rel="noopener">机器学习检测消费级 IoT 设备 DDoS</a></li>
+<li><a href="http://cyberrus.com/wp-content/uploads/2018/06/33-43-226-18_4.-Sheluhin.pdf" target="_blank" rel="noopener">计算机系统中的异常检测</a></li>
+</ul>
+<h2 id="↑-书籍"><a href="#↑-书籍" class="headerlink" title="↑ 书籍"></a><a href="#table-of-contents">↑</a> 书籍</h2><ul>
+<li><a href="https://www.amazon.com/Data-Mining-Machine-Learning-Cybersecurity/dp/1439839425" target="_blank" rel="noopener">网络安全中的数据挖掘与机器学习</a></li>
+<li><a href="https://www.amazon.com/Machine-Learning-Mining-Computer-Security/dp/184628029X" target="_blank" rel="noopener">网络安全中的机器学习与数据挖掘</a></li>
+<li><a href="https://www.amazon.com/Network-Anomaly-Detection-Learning-Perspective/dp/1466582081" target="_blank" rel="noopener">网络异常检测：机器学习观点</a></li>
+<li><a href="https://www.amazon.com/Machine-Learning-Security-Protecting-Algorithms/dp/1491979909" target="_blank" rel="noopener">机器学习与安全：用数据和算法保护系统</a></li>
+<li><a href="https://github.com/cylance/IntroductionToMachineLearningForSecurityPros/blob/master/IntroductionToArtificialIntelligenceForSecurityProfessionals_Cylance.pdf" target="_blank" rel="noopener">写给安全专家的人工智能介绍</a></li>
+<li><a href="https://www.packtpub.com/networking-and-servers/mastering-machine-learning-penetration-testing" target="_blank" rel="noopener">精通渗透测试中的机器学习</a></li>
+</ul>
+<h2 id="↑-演讲"><a href="#↑-演讲" class="headerlink" title="↑ 演讲"></a><a href="#table-of-contents">↑</a> 演讲</h2><ul>
+<li><a href="https://www.youtube.com/watch?v=tukidI5vuBs" target="_blank" rel="noopener">应用机器学习来支撑信息安全</a></li>
+<li><a href="https://www.youtube.com/watch?v=36IT9VgGr0g" target="_blank" rel="noopener">利用不完整的信息进行网络防卫</a></li>
+<li><a href="https://www.youtube.com/watch?v=vy-jpFpm1AU" target="_blank" rel="noopener">机器学习应用于网络安全监测</a></li>
+<li><a href="https://www.youtube.com/watch?v=yG6QlHOAWiE" target="_blank" rel="noopener">测量你威胁情报订阅的 IQ</a></li>
+<li><a href="https://www.youtube.com/watch?v=6JMEKnes-w0" target="_blank" rel="noopener">数据驱动的威胁情报：指标的传播与共享的度量</a></li>
+<li><a href="https://www.youtube.com/watch?v=dGwH7m4N8DE" target="_blank" rel="noopener">机器学习应对数据盗窃与其他主题</a></li>
+<li><a href="https://www.youtube.com/watch?v=TYVCVzEJhhQ" target="_blank" rel="noopener">基于机器学习监控的深度探索</a></li>
+<li><a href="https://www.youtube.com/watch?v=JAGDpJFFM2A" target="_blank" rel="noopener">Pwning 深度学习系统</a></li>
+<li><a href="https://www.youtube.com/watch?v=l7U0pDcsKLg" target="_blank" rel="noopener">社会工程学中武器化的数据科学</a></li>
+<li><a href="https://www.youtube.com/watch?v=oiuS1DyFNd8" target="_blank" rel="noopener">打败机器学习，你的安全厂商没告诉你的事儿</a></li>
+<li><a href="https://www.youtube.com/watch?v=u6a7afsD39A" target="_blank" rel="noopener">集思广益，群体训练-恶意软件检测的机器学习模型</a></li>
+<li><a href="https://www.youtube.com/watch?v=sPtbDUJjhbk" target="_blank" rel="noopener">打败机器学习，检测恶意软件的系统缺陷</a></li>
+<li><a href="https://www.youtube.com/watch?v=2cQRSPFSY-s" target="_blank" rel="noopener">数据包捕获 – 如何使用机器学习发现恶意软件</a></li>
+<li><a href="https://www.youtube.com/watch?v=iLNHVwSu9EA&amp;t=245s" target="_blank" rel="noopener">五分钟用机器学习构建反病毒软件</a></li>
+<li><a href="https://www.youtube.com/watch?v=zT-4zdtvR30" target="_blank" rel="noopener">使用机器学习狩猎恶意软件</a></li>
+<li><a href="https://www.youtube.com/watch?v=qVwktOa-F34" target="_blank" rel="noopener">机器学习应用于威胁检测</a></li>
+<li><a href="https://www.youtube.com/watch?v=fRklX97iGIw" target="_blank" rel="noopener">机器学习与云：扰乱检测与防御</a></li>
+<li><a href="https://www.youtube.com/watch?v=gHtN4jU69W0" target="_blank" rel="noopener">在欺诈检测中应用机器学习与深度学习</a></li>
+<li><a href="https://www.youtube.com/watch?v=yZ-Y1WCM0lc" target="_blank" rel="noopener">深度学习在流量识别上的应用</a></li>
+<li><a href="https://www.youtube.com/watch?v=_0CRSF6yPB4" target="_blank" rel="noopener">利用不完整信息进行网络防卫：机器学习方法</a></li>
+<li><a href="https://vimeo.com/112702666" target="_blank" rel="noopener">机器学习与数据科学</a></li>
+<li><a href="https://www.youtube.com/watch?v=skSIIvvZFIk" target="_blank" rel="noopener">云计算规模的机器学习应用于网络防御的进展</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZAuCEgA3itI" target="_blank" rel="noopener">应用机器学习：打败现代恶意文档</a></li>
+<li><a href="https://www.rsaconference.com/writable/presentations/file_upload/spo2-t11_automated-prevention-of-ransomware-with-machine-learning-and-gpos.pdf" target="_blank" rel="noopener">使用机器学习与 GPO 自动防御勒索软件</a></li>
+<li><a href="https://www.usenix.org/conference/enigma2017/conference-program/presentation/dumitras" target="_blank" rel="noopener">通过挖掘安全文献检测恶意软件</a></li>
+<li><a href="https://conference.hitb.org/hitbsecconf2017ams/materials/D1T3%20-%20Clarence%20Chio%20and%20Anto%20Joseph%20-%20Practical%20Machine%20Learning%20in%20Infosecurity.pdf" target="_blank" rel="noopener">信息安全中的机器学习实践</a></li>
+<li><a href="https://www.youtube.com/watch?v=6Slj2FV9CLA" target="_blank" rel="noopener">用于 Cyberdefensse 的机器学习</a></li>
+<li><a href="https://www.youtube.com/watch?v=-EUJgpiJ8Jo" target="_blank" rel="noopener">基于机器学习的网络入侵检测技术</a></li>
+<li><a href="https://www.youtube.com/watch?v=YF2dm6GZf2U" target="_blank" rel="noopener">信息安全中的机器学习实践</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/07/AI_and_Security_Dawn_Song.pdf" target="_blank" rel="noopener">AI 与安全</a></li>
+<li><a href="https://vimeo.com/230502013" target="_blank" rel="noopener">AI 与信息安全</a></li>
+<li><a href="https://www.youtube.com/watch?v=Kd3svc9HZ0Y" target="_blank" rel="noopener">超越黑名单：通过机器学习检测恶意网址</a></li>
+<li><a href="https://www.youtube.com/watch?v=c-c-IQ5pFXw" target="_blank" rel="noopener">使用机器学习辅助网络威胁狩猎</a></li>
+<li><a href="https://www.youtube.com/watch?v=QbX7BhjOOvY" target="_blank" rel="noopener">机器学习的武器化：人性被高估</a></li>
+<li><a href="https://www.youtube.com/watch?v=BWFdxAG_TGk" target="_blank" rel="noopener">机器学习：进攻与自动化的未来</a></li>
+</ul>
+<h2 id="↑-教程"><a href="#↑-教程" class="headerlink" title="↑ 教程"></a><a href="#table-of-contents">↑</a> 教程</h2><ul>
+<li><a href="http://clicksecurity.github.io/data_hacking/" target="_blank" rel="noopener">点击安全数据窃听项目</a></li>
+<li><a href="http://fsecurify.com/using-neural-networks-to-generate-human-readable-passwords/" target="_blank" rel="noopener">使用神经网络生成人类可读的密码</a></li>
+<li><a href="http://fsecurify.com/machine-learning-based-password-strength-checking/" target="_blank" rel="noopener">基于机器学习的密码强度分类</a></li>
+<li><a href="http://fsecurify.com/using-machine-learning-detect-malicious-urls/" target="_blank" rel="noopener">应用机器学习在检测恶意 URL</a></li>
+<li><a href="http://www.kdnuggets.com/2015/12/big-data-science-security-fraud-detection.html" target="_blank" rel="noopener">在安全与欺诈检测中的大数据与数据科学</a></li>
+<li><a href="https://deepmlblog.wordpress.com/2016/01/03/how-to-break-a-captcha-system/" target="_blank" rel="noopener">使用深度学习突破验证码</a></li>
+<li><a href="https://www.r-bloggers.com/data-mining-for-network-security-and-intrusion-detection/" target="_blank" rel="noopener">网络安全与入侵检测中的数据挖掘</a></li>
+<li><a href="http://blog.sqrrl.com/an-introduction-to-machine-learning-for-cybersecurity-and-threat-hunting" target="_blank" rel="noopener">机器学习应用于网络安全与威胁狩猎简介</a></li>
+<li><a href="https://securityintelligence.com/applying-machine-learning-to-improve-your-intrusion-detection-system/" target="_blank" rel="noopener">应用机器学习提高入侵检测系统</a></li>
+<li><a href="http://blogs.splunk.com/2017/01/30/analyzing-botnets-with-suricata-machine-learning/" target="_blank" rel="noopener">使用 Suricata 与机器学习分析僵尸网络</a></li>
+<li><a href="http://fsecurify.com/fwaf-machine-learning-driven-web-application-firewall/" target="_blank" rel="noopener">fWaf – 机器学习驱动的 Web 应用防火墙</a></li>
+<li><a href="https://blog.cyberreboot.org/deep-session-learning-for-cyber-security-e7c0f6804b81#.eo2m4alid" target="_blank" rel="noopener">网络安全中的深度域学习</a></li>
+<li><a href="http://resources.infosecinstitute.com/machine-learning-malware-detection/" target="_blank" rel="noopener">DMachine Learning 用于恶意软件检测</a></li>
+<li><a href="https://marcoramilli.blogspot.ru/2017/04/shadowbrokers-leak-machine-learning.html" target="_blank" rel="noopener">ShadowBrokers 泄漏：机器学习方法</a></li>
+<li><a href="https://docs.google.com/document/d/1v4plS1EhLBfjaz-9GHBqspTH7vnrJfqLrLjeP9k9i9A/edit" target="_blank" rel="noopener">信息安全领域的机器学习实践</a></li>
+<li><a href="http://blog.trendmicro.com/trendlabs-security-intelligence/defplorex-machine-learning-toolkit-large-scale-ecrime-forensics/" target="_blank" rel="noopener">用于大规模数字犯罪取证的机器学习工具包</a></li>
+<li><a href="https://github.com/lcatro/WebShell-Detect-By-Machine-Learning" target="_blank" rel="noopener">机器学习检测 WebShell</a></li>
+<li><a href="https://www.fireeye.com/blog/threat-research/2018/06/build-machine-learning-models-for-the-soc.html" target="_blank" rel="noopener">为 SOC 构建机器学习模型</a></li>
+<li><a href="https://aivillage.org/posts/detecting-web-attacks-rnn/" target="_blank" rel="noopener">使用 RNN 检测 Web 攻击</a></li>
+</ul>
+<h2 id="↑-课程"><a href="#↑-课程" class="headerlink" title="↑ 课程"></a><a href="#table-of-contents">↑</a> 课程</h2><ul>
+<li><a href="http://web.stanford.edu/class/cs259d/" target="_blank" rel="noopener">Stanford 的网络安全数据挖掘课</a></li>
+<li><a href="http://www.pentesteracademy.com/course?id=30" target="_blank" rel="noopener">Infosec 数据科学与机器学习</a></li>
+</ul>
+<h2 id="↑-杂项"><a href="#↑-杂项" class="headerlink" title="↑ 杂项"></a><a href="#table-of-contents">↑</a> 杂项</h2><ul>
+<li><a href="http://news.mit.edu/2016/ai-system-predicts-85-percent-cyber-attacks-using-input-human-experts-0418" target="_blank" rel="noopener">使用人类专家的输入对网络攻击达到 85% 的预测系统</a></li>
+<li><a href="http://www.mlsecproject.org/#open-source-projects" target="_blank" rel="noopener">使用机器学习的网络安全项目开源列表</a></li>
+<li><a href="https://github.com/13o-bbr-bbq/machine_learning_security" target="_blank" rel="noopener">关于机器学习和安全的源码</a></li>
+<li><a href="https://github.com/PacktPublishing/Mastering-Machine-Learning-for-Penetration-Testing" target="_blank" rel="noopener">精通渗透测试中的机器学习源码</a></li>
+</ul>
+<h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p><img src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="cc license"></p>
+<p>许可证为 <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    二尺九五
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://2c95.github.io/2018/10/25/2018-10-25-DeepLearning-tools/" title="历年来那些与网络安全中机器学习相关最好的工具与资源">https://2c95.github.io/2018/10/25/2018-10-25-DeepLearning-tools/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://2c95.github.io/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络安全/" rel="tag"># 网络安全</a>
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/24/2018-10-24-HPC-User/" rel="next" title="HPC使用说明">
+                <i class="fa fa-chevron-left"></i> HPC使用说明
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/31/2018-10-31-sandutishui/" rel="prev" title="三度提水">
+                三度提水 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/logo.jpg"
+                alt="二尺九五" />
+            
+              <p class="site-author-name" itemprop="name">二尺九五</p>
+              <p class="site-description motion-element" itemprop="description">公众号：二尺九五</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-贡献"><span class="nav-number">2.</span> <span class="nav-text">↑ 贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-数据集"><span class="nav-number">3.</span> <span class="nav-text">↑ 数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-论文"><span class="nav-number">4.</span> <span class="nav-text">↑ 论文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-书籍"><span class="nav-number">5.</span> <span class="nav-text">↑ 书籍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-演讲"><span class="nav-number">6.</span> <span class="nav-text">↑ 演讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-教程"><span class="nav-number">7.</span> <span class="nav-text">↑ 教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-课程"><span class="nav-number">8.</span> <span class="nav-text">↑ 课程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#↑-杂项"><span class="nav-number">9.</span> <span class="nav-text">↑ 杂项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许可证"><span class="nav-number">10.</span> <span class="nav-text">许可证</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">二尺九五</span>
+<a href="http://www.miitbeian.gov.cn/">豫ICP备18040558号</a> 
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
