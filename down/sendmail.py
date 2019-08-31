@@ -17,5 +17,5 @@ def sendmail(sub, con):
     smtp = smtplib.SMTP()
     smtp.connect('smtp.qq.com', '25')
     smtp.login('15614100@qq.com', '')
-    smtp.sendmail('15614100@qq.com', '15614100@qq.com',str(msg))
+    smtp.sendmail('15614100@qq.com', 'alarm@htu.edu.cn',str(msg))
     smtp.quit()
