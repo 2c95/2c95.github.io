@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="SSH 端口转发," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="title: SSH 端口转发date: 2019-09-01tags:   SSH 端口转发categories: 技术文档SSH 端口转发  ​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器">
+<meta name="description" content="SSH 端口转发​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器 IP 进行访问。这样做虽然简便快捷，但是直接将 IP 与端口向外开放的做法也存在风险。因此我更推荐的做法是采用 SSH 端口转发来">
+<meta name="keywords" content="SSH 端口转发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="凯叔日记">
+<meta property="og:title" content="SSH 端口转发">
 <meta property="og:url" content="http://www.xmakers.cn/2019/09/01/2019-09-01-ssh-port/index.html">
 <meta property="og:site_name" content="凯叔日记">
-<meta property="og:description" content="title: SSH 端口转发date: 2019-09-01tags:   SSH 端口转发categories: 技术文档SSH 端口转发  ​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器">
+<meta property="og:description" content="SSH 端口转发​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器 IP 进行访问。这样做虽然简便快捷，但是直接将 IP 与端口向外开放的做法也存在风险。因此我更推荐的做法是采用 SSH 端口转发来">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-01T03:15:06.386Z">
+<meta property="og:updated_time" content="2019-09-01T03:21:54.396Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凯叔日记">
-<meta name="twitter:description" content="title: SSH 端口转发date: 2019-09-01tags:   SSH 端口转发categories: 技术文档SSH 端口转发  ​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器">
+<meta name="twitter:title" content="SSH 端口转发">
+<meta name="twitter:description" content="SSH 端口转发​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器 IP 进行访问。这样做虽然简便快捷，但是直接将 IP 与端口向外开放的做法也存在风险。因此我更推荐的做法是采用 SSH 端口转发来">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | 凯叔日记</title>
+  <title>SSH 端口转发 | 凯叔日记</title>
   
 
 
@@ -325,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">SSH 端口转发</h1>
         
 
         <div class="post-meta">
@@ -337,7 +338,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T11:15:06+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T00:00:00+08:00">
                 2019-09-01
               </time>
             
@@ -347,6 +348,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术文档/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,11 +398,7 @@
       
 
       
-        <p>title: SSH 端口转发<br>date: 2019-09-01<br>tags: </p>
-<ul>
-<li>SSH 端口转发<br>categories: 技术文档<h1 id="SSH-端口转发"><a href="#SSH-端口转发" class="headerlink" title="SSH 端口转发"></a>SSH 端口转发</h1></li>
-</ul>
-<p>​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器 IP 进行访问。这样做虽然简便快捷，但是直接将 IP 与端口向外开放的做法也存在风险。因此我更推荐的做法是采用 SSH 端口转发来实现访问，因为 SSH 会自动加密和解密所有 SSH 客户端与服务端之间的网络数据。</p>
+        <h1 id="SSH-端口转发"><a href="#SSH-端口转发" class="headerlink" title="SSH 端口转发"></a>SSH 端口转发</h1><p>​        其实细心的同学之前一定发现了，我们之前将 Jupyter 的运行 IP 设置为 localhost ，这样的话是无法通过公网访问到 Jupyter 的。虽然网上通常的做法都是将 IP 设置为 0.0.0.0 ，然后本地端直接通过服务器 IP 进行访问。这样做虽然简便快捷，但是直接将 IP 与端口向外开放的做法也存在风险。因此我更推荐的做法是采用 SSH 端口转发来实现访问，因为 SSH 会自动加密和解密所有 SSH 客户端与服务端之间的网络数据。</p>
 <p>​        SSH 提供的端口转发，能够将其他 TCP 端口的网络数据通过 SSH 链接来转发，并且自动提供了相应的加密及解密服务。这一过程有时也被叫做“隧道”（tunneling），这是因为 SSH 为其他 TCP 链接提供了一个安全的通道来进行传输而得名。</p>
 <h3 id="因此-SSH-端口转发能提供两大功能："><a href="#因此-SSH-端口转发能提供两大功能：" class="headerlink" title="因此 SSH 端口转发能提供两大功能："></a>因此 SSH 端口转发能提供两大功能：</h3><ul>
 <li><h4 id="加密-SSH-客户端到-SSH-服务器端的通信"><a href="#加密-SSH-客户端到-SSH-服务器端的通信" class="headerlink" title="加密 SSH 客户端到 SSH 服务器端的通信"></a>加密 SSH 客户端到 SSH 服务器端的通信</h4></li>
@@ -410,7 +429,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xmakers.cn/2019/09/01/2019-09-01-ssh-port/" title="">http://www.xmakers.cn/2019/09/01/2019-09-01-ssh-port/</a>
+    <a href="http://www.xmakers.cn/2019/09/01/2019-09-01-ssh-port/" title="SSH 端口转发">http://www.xmakers.cn/2019/09/01/2019-09-01-ssh-port/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -423,6 +442,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/SSH-端口转发/" rel="tag"># SSH 端口转发</a>
+          
+        </div>
+      
 
       
       
@@ -432,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/01/2019-09-01-nginx-frp/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2019/09/01/2019-09-01-maths -Part1.A.Cal2018/" rel="next" title="【小学数学】2018年综合测评数学计算题">
+                <i class="fa fa-chevron-left"></i> 【小学数学】2018年综合测评数学计算题
               </a>
             
           </div>
@@ -441,6 +466,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/01/2019-09-01-nginx-frp/" rel="prev" title="同时配置Nginx(转发)和Frp(内网映射)">
+                同时配置Nginx(转发)和Frp(内网映射) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -543,7 +572,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

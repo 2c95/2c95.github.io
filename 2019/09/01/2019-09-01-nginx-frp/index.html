@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx,Frp," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="title: 同时配置Nginx(转发)和Frp(内网映射)date: 2019-09-01tags:   nginx Frpcategories: 技术文档同时配置Nginx(转发)和Frp(内网映射)  操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc">
+<meta name="description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
+<meta name="keywords" content="nginx,Frp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="凯叔日记">
+<meta property="og:title" content="同时配置Nginx(转发)和Frp(内网映射)">
 <meta property="og:url" content="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/index.html">
 <meta property="og:site_name" content="凯叔日记">
-<meta property="og:description" content="title: 同时配置Nginx(转发)和Frp(内网映射)date: 2019-09-01tags:   nginx Frpcategories: 技术文档同时配置Nginx(转发)和Frp(内网映射)  操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc">
+<meta property="og:description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-01T03:04:46.816Z">
+<meta property="og:updated_time" content="2019-09-01T03:21:38.737Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凯叔日记">
-<meta name="twitter:description" content="title: 同时配置Nginx(转发)和Frp(内网映射)date: 2019-09-01tags:   nginx Frpcategories: 技术文档同时配置Nginx(转发)和Frp(内网映射)  操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc">
+<meta name="twitter:title" content="同时配置Nginx(转发)和Frp(内网映射)">
+<meta name="twitter:description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | 凯叔日记</title>
+  <title>同时配置Nginx(转发)和Frp(内网映射) | 凯叔日记</title>
   
 
 
@@ -325,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">同时配置Nginx(转发)和Frp(内网映射)</h1>
         
 
         <div class="post-meta">
@@ -337,7 +338,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T11:04:46+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T00:00:00+08:00">
                 2019-09-01
               </time>
             
@@ -347,6 +348,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术文档/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,12 +398,7 @@
       
 
       
-        <p>title: 同时配置Nginx(转发)和Frp(内网映射)<br>date: 2019-09-01<br>tags: </p>
-<ul>
-<li>nginx</li>
-<li>Frp<br>categories: 技术文档<h1 id="同时配置Nginx-转发-和Frp-内网映射"><a href="#同时配置Nginx-转发-和Frp-内网映射" class="headerlink" title="同时配置Nginx(转发)和Frp(内网映射)"></a>同时配置Nginx(转发)和Frp(内网映射)</h1></li>
-</ul>
-<h4 id="操作系统：ubuntu64-16-04"><a href="#操作系统：ubuntu64-16-04" class="headerlink" title="操作系统：ubuntu64 16.04"></a>操作系统：ubuntu64 16.04</h4><h2 id="1-nginx-安装"><a href="#1-nginx-安装" class="headerlink" title="1.nginx 安装"></a>1.nginx 安装</h2><h4 id="基于apt的安装"><a href="#基于apt的安装" class="headerlink" title="基于apt的安装"></a>基于apt的安装</h4><p><code>sudo apt-get install nginx</code></p>
+        <h1 id="同时配置Nginx-转发-和Frp-内网映射"><a href="#同时配置Nginx-转发-和Frp-内网映射" class="headerlink" title="同时配置Nginx(转发)和Frp(内网映射)"></a>同时配置Nginx(转发)和Frp(内网映射)</h1><h4 id="操作系统：ubuntu64-16-04"><a href="#操作系统：ubuntu64-16-04" class="headerlink" title="操作系统：ubuntu64 16.04"></a>操作系统：ubuntu64 16.04</h4><h2 id="1-nginx-安装"><a href="#1-nginx-安装" class="headerlink" title="1.nginx 安装"></a>1.nginx 安装</h2><h4 id="基于apt的安装"><a href="#基于apt的安装" class="headerlink" title="基于apt的安装"></a>基于apt的安装</h4><p><code>sudo apt-get install nginx</code></p>
 <h4 id="安装好的文件位置："><a href="#安装好的文件位置：" class="headerlink" title="安装好的文件位置："></a>安装好的文件位置：</h4><p><code>/usr/sbin/nginx：主程序</code><br><code>/etc/nginx：存放配置文件</code><br><code>/usr/share/nginx：存放静态文件</code><br><code>/var/log/nginx：存放日志</code></p>
 <p>其实从上面的根目录文件夹可以知道，Linux系统的配置文件一般放在/etc，日志一般放在/var/log，运行的程序一般放在/usr/sbin或者/usr/bin。Nginx的配置项所在目录，可以打开/etc/nginx/nginx.conf</p>
 <p>然后通过这种方式安装的，会自动创建服务，会自动在/etc/init.d/nginx新建服务脚本，然后就可以使用sudo service nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}的命令启动。还有一个好处，创建好的文件由于放在/usr/sbin目录下，所以能直接在终端中使用nginx命令而无需指定路径。</p>
@@ -411,7 +429,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/" title="">http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/</a>
+    <a href="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/" title="同时配置Nginx(转发)和Frp(内网映射)">http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -424,6 +442,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+            <a href="/tags/Frp/" rel="tag"># Frp</a>
+          
+        </div>
+      
 
       
       
@@ -433,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/01/2019-09-01-maths -Part1.A.Cal2015/" rel="next" title="【小学数学】2015年综合测评数学计算题">
-                <i class="fa fa-chevron-left"></i> 【小学数学】2015年综合测评数学计算题
+              <a href="/2019/09/01/2019-09-01-ssh-port/" rel="next" title="SSH 端口转发">
+                <i class="fa fa-chevron-left"></i> SSH 端口转发
               </a>
             
           </div>
@@ -442,10 +468,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/01/2019-09-01-ssh-port/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -548,7 +570,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
