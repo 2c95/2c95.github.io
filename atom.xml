@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.xmakers.cn/"/>
-  <updated>2019-10-20T09:51:07.035Z</updated>
+  <updated>2019-10-20T09:37:13.451Z</updated>
   <id>http://www.xmakers.cn/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>【小学数学】191020牛吃草问题</title>
-    <link href="http://www.xmakers.cn/2019/10/20/2019-10-20-niuchicao/"/>
-    <id>http://www.xmakers.cn/2019/10/20/2019-10-20-niuchicao/</id>
-    <published>2019-10-19T16:00:00.000Z</published>
-    <updated>2019-10-20T09:51:07.035Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学牛吃草问题应用题"><a href="#小学数学牛吃草问题应用题" class="headerlink" title="小学数学牛吃草问题应用题"></a>小学数学牛吃草问题应用题</h1><h2 id="内容提要"><a href="#内容提要" class="headerlink" title="内容提要"></a>内容提要</h2><p><strong>常规题的解题过程</strong><br>1.设1头牛1天吃1份草<br>2.求出草每天的生长量<br>3.求出原有的的草量<br>4.让一些牛去吃每天长的草<br>5.其他牛吃原有的草</p><p><strong>例1(★★)</strong>有一块匀速生长的草场，27头牛6周可以吃完，或者23头牛9周可以吃完。若是21头牛，要几周才可以吃完？</p><p><strong>例2(★★★)</strong>有一块匀速生长的草场，可供12头牛吃25天，或可供24头牛吃10天。那么它可供几头牛吃20天？</p><p><strong>例3(★★★)</strong>有一片草场，草每天的生长速度相同。若14头牛30天可将草吃完，70只羊16天也可将草吃完(4只羊一天的吃草量相当于1头牛一天的吃草量)。那么，17头牛和20只羊多少天可将草吃完？</p><p><strong>例4(★★★★)</strong>有三块草地，面积分别为5公顷、15公顷和24公顷。草地上的草一样厚，而且长得一样快。第一块草地可供10头牛吃30天，第二块草地可供28头牛吃45天。问：第三块草地可供多少头牛吃80天？</p><p><strong>例5(★★★★)</strong>画展9点开门，但早有人来排队入场，从第一个观众来到时起，若每分钟来的观众一样多，如果开3个入场口，9点9分就不再有人排队；如果开5个入场口，9点5分就没有人排队。求第一个观众到达的时间。</p><p><strong>例6(★★★★★)</strong>小明从甲地步行去乙地，出发一段时间后，小亮有事去追赶他，若骑自行车，每小时行15千米，3小时可以追上；若骑摩托车，每小时行35千米，1小时可以追上；若开汽车，每小时行45千米，_____分钟可以追上小明？</p><h2 id="在线测试题"><a href="#在线测试题" class="headerlink" title="在线测试题"></a>在线测试题</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p>1．★★★牧场上有一片匀速生长的草地，可供27头牛吃6周，或供23头牛吃9周，那么它可供多少头牛吃18周？</p><p>A．19 B．25 C．15 D．30</p><p>2．★★★牧场上长满牧草，牧草每天匀速生长，这片牧草每天可供54头牛吃12天，或者可供44头牛吃16天，那么这片牧草可供38头牛吃多少天？</p><p>A．24 B．20 C．25 D．21</p><p>3．★★★★牧场有一片青草，每天生长速度相同。已知这片青草可供18只羊吃20天，或可供100只兔子吃12天。如果一只羊的吃草量等于4只兔子的吃草量，那么10只羊和70只兔子一块吃这片青草，可以吃几天？</p><p>A．10 B．11 C．12 D．10.5</p><p>4．★★★★牧场有三块草地，面积分别是4、8、12公亩，草地上的草一样密，生长一样快。第一块地可供10只小鹿吃15天，第二块地可供14只小鹿吃25天，第三块地可供15只小鹿吃多少天？</p><p>A．45 B．40 C．43 D．50</p><p>5．★★★★画展8：30开门，但早有人来排队入场，从第一个观众来到时起，若每分钟来的观众一样多，如果开3个入场口，9点10分就不再有人排队；如果开5个入场口，8点50分就没有人排队。求第一个观众到达的时间。</p><p>A．7：40 B．7：35 C．7：20 D．7：10</p><h2 id="总结提升"><a href="#总结提升" class="headerlink" title="总结提升"></a>总结提升</h2><p>1.牛吃草最大的特点是：草在长<br>2.解牛吃草问题的关键：让草不会生长<br>3.牛吃草的五大步骤：<br>    设1头牛1天吃1份草<br>    求出草每天的生长量<br>    求出原有的的草量<br>    让一些牛去吃每天长的草<br>    其他牛吃原有的草<br>4.多种动物转化成一种动物<br>5.多块草地：求出最小1块草地的情况<br>6.变形题：各个量与牛吃草对应</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
-    
-      <category term="牛吃草问题应用题" scheme="http://www.xmakers.cn/tags/%E7%89%9B%E5%90%83%E8%8D%89%E9%97%AE%E9%A2%98%E5%BA%94%E7%94%A8%E9%A2%98/"/>
-    
-  </entry>
   
   <entry>
     <title>【小学数学】191020工程问题</title>
@@ -67,6 +40,33 @@
       <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
     
       <category term="工程问题应用题" scheme="http://www.xmakers.cn/tags/%E5%B7%A5%E7%A8%8B%E9%97%AE%E9%A2%98%E5%BA%94%E7%94%A8%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【小学数学】191020牛吃草问题</title>
+    <link href="http://www.xmakers.cn/2019/10/20/2019-10-20-niuchicao/"/>
+    <id>http://www.xmakers.cn/2019/10/20/2019-10-20-niuchicao/</id>
+    <published>2019-10-19T16:00:00.000Z</published>
+    <updated>2019-10-20T09:51:07.035Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学牛吃草问题应用题"><a href="#小学数学牛吃草问题应用题" class="headerlink" title="小学数学牛吃草问题应用题"></a>小学数学牛吃草问题应用题</h1><h2 id="内容提要"><a href="#内容提要" class="headerlink" title="内容提要"></a>内容提要</h2><p><strong>常规题的解题过程</strong><br>1.设1头牛1天吃1份草<br>2.求出草每天的生长量<br>3.求出原有的的草量<br>4.让一些牛去吃每天长的草<br>5.其他牛吃原有的草</p><p><strong>例1(★★)</strong>有一块匀速生长的草场，27头牛6周可以吃完，或者23头牛9周可以吃完。若是21头牛，要几周才可以吃完？</p><p><strong>例2(★★★)</strong>有一块匀速生长的草场，可供12头牛吃25天，或可供24头牛吃10天。那么它可供几头牛吃20天？</p><p><strong>例3(★★★)</strong>有一片草场，草每天的生长速度相同。若14头牛30天可将草吃完，70只羊16天也可将草吃完(4只羊一天的吃草量相当于1头牛一天的吃草量)。那么，17头牛和20只羊多少天可将草吃完？</p><p><strong>例4(★★★★)</strong>有三块草地，面积分别为5公顷、15公顷和24公顷。草地上的草一样厚，而且长得一样快。第一块草地可供10头牛吃30天，第二块草地可供28头牛吃45天。问：第三块草地可供多少头牛吃80天？</p><p><strong>例5(★★★★)</strong>画展9点开门，但早有人来排队入场，从第一个观众来到时起，若每分钟来的观众一样多，如果开3个入场口，9点9分就不再有人排队；如果开5个入场口，9点5分就没有人排队。求第一个观众到达的时间。</p><p><strong>例6(★★★★★)</strong>小明从甲地步行去乙地，出发一段时间后，小亮有事去追赶他，若骑自行车，每小时行15千米，3小时可以追上；若骑摩托车，每小时行35千米，1小时可以追上；若开汽车，每小时行45千米，_____分钟可以追上小明？</p><h2 id="在线测试题"><a href="#在线测试题" class="headerlink" title="在线测试题"></a>在线测试题</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p>1．★★★牧场上有一片匀速生长的草地，可供27头牛吃6周，或供23头牛吃9周，那么它可供多少头牛吃18周？</p><p>A．19 B．25 C．15 D．30</p><p>2．★★★牧场上长满牧草，牧草每天匀速生长，这片牧草每天可供54头牛吃12天，或者可供44头牛吃16天，那么这片牧草可供38头牛吃多少天？</p><p>A．24 B．20 C．25 D．21</p><p>3．★★★★牧场有一片青草，每天生长速度相同。已知这片青草可供18只羊吃20天，或可供100只兔子吃12天。如果一只羊的吃草量等于4只兔子的吃草量，那么10只羊和70只兔子一块吃这片青草，可以吃几天？</p><p>A．10 B．11 C．12 D．10.5</p><p>4．★★★★牧场有三块草地，面积分别是4、8、12公亩，草地上的草一样密，生长一样快。第一块地可供10只小鹿吃15天，第二块地可供14只小鹿吃25天，第三块地可供15只小鹿吃多少天？</p><p>A．45 B．40 C．43 D．50</p><p>5．★★★★画展8：30开门，但早有人来排队入场，从第一个观众来到时起，若每分钟来的观众一样多，如果开3个入场口，9点10分就不再有人排队；如果开5个入场口，8点50分就没有人排队。求第一个观众到达的时间。</p><p>A．7：40 B．7：35 C．7：20 D．7：10</p><h2 id="总结提升"><a href="#总结提升" class="headerlink" title="总结提升"></a>总结提升</h2><p>1.牛吃草最大的特点是：草在长<br>2.解牛吃草问题的关键：让草不会生长<br>3.牛吃草的五大步骤：<br>    设1头牛1天吃1份草<br>    求出草每天的生长量<br>    求出原有的的草量<br>    让一些牛去吃每天长的草<br>    其他牛吃原有的草<br>4.多种动物转化成一种动物<br>5.多块草地：求出最小1块草地的情况<br>6.变形题：各个量与牛吃草对应</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
+    
+      <category term="牛吃草问题应用题" scheme="http://www.xmakers.cn/tags/%E7%89%9B%E5%90%83%E8%8D%89%E9%97%AE%E9%A2%98%E5%BA%94%E7%94%A8%E9%A2%98/"/>
     
   </entry>
   
