@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="nginx,Frp," />
+  <meta name="keywords" content="FastCopy,批处理命令,Bat," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
-<meta name="keywords" content="nginx,Frp">
+<meta name="description" content="硬盘监控#!/usr/bin/env python # Version = 3.5.2 # __auth__ = &amp;apos;kevin&amp;apos; import os import time import sendmail import psutil import collections  disk_used = collections.OrderedDict() cur_time = time">
+<meta name="keywords" content="FastCopy,批处理命令,Bat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="同时配置Nginx(转发)和Frp(内网映射)">
-<meta property="og:url" content="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/index.html">
+<meta property="og:title" content="硬盘监控&amp;&amp;发邮件">
+<meta property="og:url" content="http://www.xmakers.cn/2018/11/26/2018-11-26-SendMai-Diskmonitor/index.html">
 <meta property="og:site_name" content="凯叔日记">
-<meta property="og:description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
+<meta property="og:description" content="硬盘监控#!/usr/bin/env python # Version = 3.5.2 # __auth__ = &amp;apos;kevin&amp;apos; import os import time import sendmail import psutil import collections  disk_used = collections.OrderedDict() cur_time = time">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-01T03:21:38.737Z">
+<meta property="og:updated_time" content="2019-09-01T01:00:10.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="同时配置Nginx(转发)和Frp(内网映射)">
-<meta name="twitter:description" content="同时配置Nginx(转发)和Frp(内网映射)操作系统：ubuntu64 16.041.nginx 安装基于apt的安装sudo apt-get install nginx 安装好的文件位置：/usr/sbin/nginx：主程序/etc/nginx：存放配置文件/usr/share/nginx：存放静态文件/var/log/nginx：存放日志 其实从上面的根目录文件夹可以知道，Linux系统的">
+<meta name="twitter:title" content="硬盘监控&amp;&amp;发邮件">
+<meta name="twitter:description" content="硬盘监控#!/usr/bin/env python # Version = 3.5.2 # __auth__ = &amp;apos;kevin&amp;apos; import os import time import sendmail import psutil import collections  disk_used = collections.OrderedDict() cur_time = time">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/"/>
+  <link rel="canonical" href="http://www.xmakers.cn/2018/11/26/2018-11-26-SendMai-Diskmonitor/"/>
 
 
 
 
 
-  <title>同时配置Nginx(转发)和Frp(内网映射) | 凯叔日记</title>
+  <title>硬盘监控&&发邮件 | 凯叔日记</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/">
+    <link itemprop="mainEntityOfPage" href="http://www.xmakers.cn/2018/11/26/2018-11-26-SendMai-Diskmonitor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="凯叔">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">同时配置Nginx(转发)和Frp(内网映射)</h1>
+          <h1 class="post-title" itemprop="name headline">硬盘监控&&发邮件</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-01T00:00:00+08:00">
-                2019-09-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-26T00:00:00+08:00">
+                2018-11-26
               </time>
             
 
@@ -398,18 +398,83 @@
       
 
       
-        <h1 id="同时配置Nginx-转发-和Frp-内网映射"><a href="#同时配置Nginx-转发-和Frp-内网映射" class="headerlink" title="同时配置Nginx(转发)和Frp(内网映射)"></a>同时配置Nginx(转发)和Frp(内网映射)</h1><h4 id="操作系统：ubuntu64-16-04"><a href="#操作系统：ubuntu64-16-04" class="headerlink" title="操作系统：ubuntu64 16.04"></a>操作系统：ubuntu64 16.04</h4><h2 id="1-nginx-安装"><a href="#1-nginx-安装" class="headerlink" title="1.nginx 安装"></a>1.nginx 安装</h2><h4 id="基于apt的安装"><a href="#基于apt的安装" class="headerlink" title="基于apt的安装"></a>基于apt的安装</h4><p><code>sudo apt-get install nginx</code></p>
-<h4 id="安装好的文件位置："><a href="#安装好的文件位置：" class="headerlink" title="安装好的文件位置："></a>安装好的文件位置：</h4><p><code>/usr/sbin/nginx：主程序</code><br><code>/etc/nginx：存放配置文件</code><br><code>/usr/share/nginx：存放静态文件</code><br><code>/var/log/nginx：存放日志</code></p>
-<p>其实从上面的根目录文件夹可以知道，Linux系统的配置文件一般放在/etc，日志一般放在/var/log，运行的程序一般放在/usr/sbin或者/usr/bin。Nginx的配置项所在目录，可以打开/etc/nginx/nginx.conf</p>
-<p>然后通过这种方式安装的，会自动创建服务，会自动在/etc/init.d/nginx新建服务脚本，然后就可以使用sudo service nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}的命令启动。还有一个好处，创建好的文件由于放在/usr/sbin目录下，所以能直接在终端中使用nginx命令而无需指定路径。</p>
-<h2 id="2-Frps安装"><a href="#2-Frps安装" class="headerlink" title="2.Frps安装"></a>2.Frps安装</h2><p>frps.ini配置文件如下<br>/etc/frp/frps.ini;存放配置文件<br>/usr/sbin/frps;主程序<br><code>[common]</code><br><code>bind_port = 7000</code><br><code>vhost_http_port = 8080</code><br><code>[nas]</code><br><code>type = http</code><br><code>custom_domains = nas.xmakers.cn</code><br><code>[ssh]</code><br><code>listen_port = 6000</code></p>
-<p>frps开机自启动<br>我们使用Linux下常用的进程管理器supervisor来管理FRP服务。<br>安装supervisor。<br>sudo apt install supervisor<br>然后在/etc/supervisor/conf.d下新建一个配置文件frp.conf，输入以下内容。command放置frp软件的位置。<br><code>[program:frp]</code></p>
-<p><code>command = /usr/sbin/frps -c /etc/frp/frps.ini</code></p>
-<p><code>autostart = true</code></p>
-<h2 id="3-frp做内网穿透，把内网的服务器开放到外网。"><a href="#3-frp做内网穿透，把内网的服务器开放到外网。" class="headerlink" title="3.frp做内网穿透，把内网的服务器开放到外网。"></a>3.frp做内网穿透，把内网的服务器开放到外网。</h2><p>如果是http服务的话，80端口的做法是使用二级域名xxx做个A记录指一台没有nginx 之类的服务器IP，然后用浏览器打开xxx.example.com就打开了。其他端口是在frpc.ini里指定的，就加个端口号如xxx.example.com:1234就打开了，这种情况用于外网服务器已经有nginx在运行占用了80端口， 这时如果不想用端口号来打开，就要做三级域名解析，同时nginx做反向代理，把这个1234端口代理到80.</p>
-<p>其实只要给 nginx 增加一个简单的配置，就可以将某个域名的流量转发给 frp 了，还可以通过泛解析来映射不同的网站。<br><code>server {</code><br>    <code>listen 80;</code><br>    <code>server_name *.frp.example.com;</code><br>    <code>location / {</code><br>        <code>proxy_pass http://127.0.0.1:8081;</code><br>        <code>proxy_set_header    Host            $host:80;
-        proxy_set_header    X-Real-IP       $remote_addr;</code><br>        <code>proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;</code><br>        <code>proxy_hide_header   X-Powered-By;</code><br>    <code>}</code><br><code>}</code></p>
+        <h4 id="硬盘监控"><a href="#硬盘监控" class="headerlink" title="硬盘监控"></a>硬盘监控</h4><pre><code>#!/usr/bin/env python
+# Version = 3.5.2
+# __auth__ = &apos;kevin&apos;
+import os
+import time
+import sendmail
+import psutil
+import collections
 
+disk_used = collections.OrderedDict()
+cur_time = time.time()
+# current_day = cur_time - cur_time % 86400
+root_dir = [&quot;D:\\SYSLOG&quot;, &quot;F:\\log&quot;]
+log_name = &apos;result.log&apos;
+
+
+def get_disk_info():
+    &quot;&quot;&quot;
+    查看磁盘属性信息
+    :return: 磁盘使用率和剩余空间
+    &quot;&quot;&quot;
+    for id in psutil.disk_partitions():
+        if &apos;cdrom&apos; in id.opts or id.fstype == &apos;&apos;:
+            continue
+        disk_name = id.device.split(&apos;:&apos;)
+        s = disk_name[0]
+        disk_info = psutil.disk_usage(id.device)
+        disk_used[s + &apos;盘使用率：&apos;] = &apos;{}%&apos;.format(disk_info.percent)
+        disk_used[s + &apos;剩余空间：&apos;] = &apos;{}GB&apos;.format(disk_info.free // 1024 // 1024 // 1024)
+    return disk_used
+
+
+if __name__ == &apos;__main__&apos;:
+    with open(log_name, &apos;w&apos;) as f:
+        ret = get_disk_info()
+        for k, v in ret.items():
+            f.write(&apos;{}{}。\n&apos;.format(k, v))
+
+        for item in root_dir:
+            print(item)
+            all_size = 0
+            for parent, dir_names, file_names in os.walk(item):  # 遍历文件夹
+                for filename in file_names:
+                    path = os.path.join(parent, filename)  # 获取文件路径
+                    stat_info = os.stat(path)  # 读取文件属性
+                    upload_time = time.ctime(stat_info.st_mtime)
+
+                    if stat_info.st_mtime &gt; cur_time - 86400:
+                        all_size += stat_info.st_size
+                        #if stat_info.st_size // 1024 &lt;= 5:
+                        #    f.write(&apos;\n{}\n\t大小：{}KB,  上传时间：{}。&apos;.format(path, stat_info.st_size // 1024, upload_time))
+
+            f.write(&apos;\n\n {}本日备份大小：{}GB.\n&apos;.format(item, all_size // 1024 // 1024 // 1024))
+    with open(log_name, &apos;rb&apos;) as logfile:
+        sendmail.sendmail(&apos;Syslog服务器备份监控&apos;, str(logfile.read(), encoding=&apos;GBK&apos;))    
+</code></pre><h4 id="发邮件"><a href="#发邮件" class="headerlink" title="发邮件"></a>发邮件</h4><pre><code>#!/usr/bin/env python
+# Version = 3.5.2
+# __auth__ = &apos;kevin&apos;
+import smtplib
+import email.mime.multipart
+import email.mime.text
+
+
+def sendmail(sub, con):
+    msg = email.mime.multipart.MIMEMultipart()
+    msg[&apos;from&apos;] = &quot;15614100@qq.com&quot;
+    msg[&apos;to&apos;] = &quot;alarm@htu.edu.cn&quot;
+    msg[&apos;subject&apos;] = sub
+    content = con
+    txt = email.mime.text.MIMEText(content)
+    msg.attach(txt)
+    smtp = smtplib.SMTP()
+    smtp.connect(&apos;smtp.qq.com&apos;, &apos;25&apos;)
+    smtp.login(&apos;15614100@qq.com&apos;, &apos;&apos;)
+    smtp.sendmail(&apos;15614100@qq.com&apos;, &apos;15614100@qq.com&apos;,str(msg))
+    smtp.quit()
+</code></pre>
       
     </div>
     
@@ -429,7 +494,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/" title="同时配置Nginx(转发)和Frp(内网映射)">http://www.xmakers.cn/2019/09/01/2019-09-01-nginx-frp/</a>
+    <a href="http://www.xmakers.cn/2018/11/26/2018-11-26-SendMai-Diskmonitor/" title="硬盘监控&&发邮件">http://www.xmakers.cn/2018/11/26/2018-11-26-SendMai-Diskmonitor/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -444,9 +509,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nginx/" rel="tag"># nginx</a>
+            <a href="/tags/FastCopy/" rel="tag"># FastCopy</a>
           
-            <a href="/tags/Frp/" rel="tag"># Frp</a>
+            <a href="/tags/批处理命令/" rel="tag"># 批处理命令</a>
+          
+            <a href="/tags/Bat/" rel="tag"># Bat</a>
           
         </div>
       
@@ -459,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/01/2019-09-01-maths -Part1.A.Cal2018/" rel="next" title="【小学数学】2018年综合测评数学计算题">
-                <i class="fa fa-chevron-left"></i> 【小学数学】2018年综合测评数学计算题
+              <a href="/2018/11/26/2018-11-26 - FastCopy/" rel="next" title="FastCopy 批处理命令">
+                <i class="fa fa-chevron-left"></i> FastCopy 批处理命令
               </a>
             
           </div>
@@ -469,8 +536,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/01/2019-09-01-maths -Part1.A.Cal2017/" rel="prev" title="【小学数学】2017年综合测评数学计算题">
-                【小学数学】2017年综合测评数学计算题 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/03/2018-12 - 06 -Pycharm/" rel="prev" title="pycharm常用快捷键">
+                pycharm常用快捷键 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -614,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#同时配置Nginx-转发-和Frp-内网映射"><span class="nav-number">1.</span> <span class="nav-text">同时配置Nginx(转发)和Frp(内网映射)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#操作系统：ubuntu64-16-04"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">操作系统：ubuntu64 16.04</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-nginx-安装"><span class="nav-number">1.1.</span> <span class="nav-text">1.nginx 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基于apt的安装"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">基于apt的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装好的文件位置："><span class="nav-number">1.1.0.2.</span> <span class="nav-text">安装好的文件位置：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Frps安装"><span class="nav-number">1.2.</span> <span class="nav-text">2.Frps安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-frp做内网穿透，把内网的服务器开放到外网。"><span class="nav-number">1.3.</span> <span class="nav-text">3.frp做内网穿透，把内网的服务器开放到外网。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#硬盘监控"><span class="nav-number">1.</span> <span class="nav-text">硬盘监控</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发邮件"><span class="nav-number">2.</span> <span class="nav-text">发邮件</span></a></li></ol></div>
             
 
           </div>
