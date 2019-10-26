@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>凯叔日记</title>
+  <title>二尺九五</title>
   
   <subtitle>我们一起成长</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -98,6 +98,35 @@
   </entry>
   
   <entry>
+    <title>【小学数学】1909026—行程问题(二)</title>
+    <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%202/"/>
+    <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 2/</id>
+    <published>2019-09-25T16:00:00.000Z</published>
+    <updated>2019-09-26T07:32:18.628Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学应用题-行程问题之火车行程"><a href="#小学数学应用题-行程问题之火车行程" class="headerlink" title="小学数学应用题-行程问题之火车行程"></a>小学数学应用题-行程问题之火车行程</h1><h2 id="火车行程问题引入"><a href="#火车行程问题引入" class="headerlink" title="火车行程问题引入"></a>火车行程问题引入</h2><p>通常，在行程问题中所涉及的运动物体（人或者车）是不考虑它的本身的长度。可是当考虑火车的行程问题是，一列火车有百米以上的长度，火车的长度是不能忽略不计的。因此“追及”、“相遇”这些概念就与原来的不一样。</p><p>请看下面两个图：</p><p>有两列火车A与B，图（1）表示A已经追上B，图（2）表示A已经超过B。</p><p>从“追上”到“超过”就是一个“追及的过程”。比较两个火车头，“追上”时A落后B的车身长，“超过”时A领先A的车身厂，也就是从“追上”到“超过”，A的车头比B的车头多走的距离是B的车身长，因此所需的时间是</p><h2 id="追及与相遇应用题"><a href="#追及与相遇应用题" class="headerlink" title="追及与相遇应用题"></a>追及与相遇应用题</h2><p><strong>例8</strong> 慢车车身长125米，车速17米/秒；快车车长140米，车速22米/秒，慢车在前面行驶，快车从后面追上到完全超过需要多长时间？</p><p><strong>例9</strong> 小张以3米/秒的速度沿着铁路跑步，迎面开来一列长147米的火车，它的行驶速度是18米/秒。问：火车经过小张身旁的时间是多少？</p><p><strong>例10</strong> 长150米的火车以18米/秒速度穿越一条300米的隧道。问火车穿越隧道（进入隧道直至完全离开）要多长时间？</p><p><strong>例11</strong> 一列火车通过一条长1260米的桥梁（车头碰上直至车尾离开桥）用了60秒，火车穿越长2010米的隧道用了90秒。问：这列火车的车速和车身长？</p><p><strong>例12</strong> 火车通过长为82米的铁路用了22秒，如果列车的速度加快1杯，它通过162米铁桥就16秒。求列车原来的速度和它的长度（速度单位用千米/小时）</p><p><strong>例13</strong> 小明坐在行驶的列车上，发现从迎面开来的火车用了6秒才通过他的窗口。后来又看到列车通过一座180米长的铁桥用了12秒。一直货车长168米。求火车每小时行走多少千米？</p><p><strong>例14</strong> 长120米的列车，以72千米/小时的速度往东行驶，长300米的火车往西行驶。他们在长125米的铁桥西端碰上，在桥的东端离开。求火车每小时行驶多少千米？</p><p><strong>例15</strong> 铁路与公路平行。公路上有一个人在行走，速度是4千米/小时，一列火车追上并超过这个人用了6秒。公路上还有一辆汽车与火车同向像是，速度是67千米/小时，火车追上并超过这辆骑车用了48秒。求火车的速度与长度（不用考虑汽车的长度）</p><h2 id="重要内容回顾"><a href="#重要内容回顾" class="headerlink" title="重要内容回顾"></a>重要内容回顾</h2><ul><li>火车行程之追及问题；</li><li>火车行程之相遇问题。</li></ul><h2 id="在线测试"><a href="#在线测试" class="headerlink" title="在线测试"></a>在线测试</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p><strong>1.</strong>长130米的列车，以16米/秒的速度正在行驶，它通过一个隧道用了48秒，这个隧道长多少米？</p><p><strong>2.</strong>K301次列车通过450米长的铁桥用了23秒，进过一位站在铁路边的扳道工人用了8秒。列车的速度和长度各是多少？</p><p><strong>3.</strong>长72米的列车，追上长108米的货车到完全超过用了10秒，如果货车的速度为原来速度的1.4倍，那么列车追上火车就需要15秒。火车的速度是每秒多少米？</p><p><strong>4.</strong>在与铁路平行的公路上，又一行人和一骑自行车的人同向前进，行人每小时走3.6千米，骑车人每小时行10.8千米.在铁路上从这两人后面又列火车开来，火车通过行人用22秒，通过骑车人用26秒。这列火车全长多少千米?</p><p><strong>5.</strong>长90米的列车速度是54千米/小时，它追上并超过长50米的列车用了14秒。如果这两列列车相向而行，从相遇到完全离开要用多长时间？</p><p><strong>6.</strong>在双轨的铁道上，速度为54千米/小时的货车，10时到达铁桥，10时1分24秒完全通过铁桥，后来一列速度为72千米/小时的列车10时12分到达铁桥，10时12分53秒完全通过铁桥。10时28分56秒列车完全超过在前面行驶的货车。求货车、列车和铁桥的长度各是多少米？</p><h2 id="拓展学习"><a href="#拓展学习" class="headerlink" title="拓展学习"></a>拓展学习</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
+    
+      <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="火车行程问题" scheme="http://www.xmakers.cn/tags/%E7%81%AB%E8%BD%A6%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【小学数学】1909026—行程问题(三)</title>
     <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%203/"/>
     <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 3/</id>
@@ -152,35 +181,6 @@
       <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
     
       <category term="追及与相遇" scheme="http://www.xmakers.cn/tags/%E8%BF%BD%E5%8F%8A%E4%B8%8E%E7%9B%B8%E9%81%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【小学数学】1909026—行程问题(二)</title>
-    <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%202/"/>
-    <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 2/</id>
-    <published>2019-09-25T16:00:00.000Z</published>
-    <updated>2019-09-26T07:32:18.628Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学应用题-行程问题之火车行程"><a href="#小学数学应用题-行程问题之火车行程" class="headerlink" title="小学数学应用题-行程问题之火车行程"></a>小学数学应用题-行程问题之火车行程</h1><h2 id="火车行程问题引入"><a href="#火车行程问题引入" class="headerlink" title="火车行程问题引入"></a>火车行程问题引入</h2><p>通常，在行程问题中所涉及的运动物体（人或者车）是不考虑它的本身的长度。可是当考虑火车的行程问题是，一列火车有百米以上的长度，火车的长度是不能忽略不计的。因此“追及”、“相遇”这些概念就与原来的不一样。</p><p>请看下面两个图：</p><p>有两列火车A与B，图（1）表示A已经追上B，图（2）表示A已经超过B。</p><p>从“追上”到“超过”就是一个“追及的过程”。比较两个火车头，“追上”时A落后B的车身长，“超过”时A领先A的车身厂，也就是从“追上”到“超过”，A的车头比B的车头多走的距离是B的车身长，因此所需的时间是</p><h2 id="追及与相遇应用题"><a href="#追及与相遇应用题" class="headerlink" title="追及与相遇应用题"></a>追及与相遇应用题</h2><p><strong>例8</strong> 慢车车身长125米，车速17米/秒；快车车长140米，车速22米/秒，慢车在前面行驶，快车从后面追上到完全超过需要多长时间？</p><p><strong>例9</strong> 小张以3米/秒的速度沿着铁路跑步，迎面开来一列长147米的火车，它的行驶速度是18米/秒。问：火车经过小张身旁的时间是多少？</p><p><strong>例10</strong> 长150米的火车以18米/秒速度穿越一条300米的隧道。问火车穿越隧道（进入隧道直至完全离开）要多长时间？</p><p><strong>例11</strong> 一列火车通过一条长1260米的桥梁（车头碰上直至车尾离开桥）用了60秒，火车穿越长2010米的隧道用了90秒。问：这列火车的车速和车身长？</p><p><strong>例12</strong> 火车通过长为82米的铁路用了22秒，如果列车的速度加快1杯，它通过162米铁桥就16秒。求列车原来的速度和它的长度（速度单位用千米/小时）</p><p><strong>例13</strong> 小明坐在行驶的列车上，发现从迎面开来的火车用了6秒才通过他的窗口。后来又看到列车通过一座180米长的铁桥用了12秒。一直货车长168米。求火车每小时行走多少千米？</p><p><strong>例14</strong> 长120米的列车，以72千米/小时的速度往东行驶，长300米的火车往西行驶。他们在长125米的铁桥西端碰上，在桥的东端离开。求火车每小时行驶多少千米？</p><p><strong>例15</strong> 铁路与公路平行。公路上有一个人在行走，速度是4千米/小时，一列火车追上并超过这个人用了6秒。公路上还有一辆汽车与火车同向像是，速度是67千米/小时，火车追上并超过这辆骑车用了48秒。求火车的速度与长度（不用考虑汽车的长度）</p><h2 id="重要内容回顾"><a href="#重要内容回顾" class="headerlink" title="重要内容回顾"></a>重要内容回顾</h2><ul><li>火车行程之追及问题；</li><li>火车行程之相遇问题。</li></ul><h2 id="在线测试"><a href="#在线测试" class="headerlink" title="在线测试"></a>在线测试</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p><strong>1.</strong>长130米的列车，以16米/秒的速度正在行驶，它通过一个隧道用了48秒，这个隧道长多少米？</p><p><strong>2.</strong>K301次列车通过450米长的铁桥用了23秒，进过一位站在铁路边的扳道工人用了8秒。列车的速度和长度各是多少？</p><p><strong>3.</strong>长72米的列车，追上长108米的货车到完全超过用了10秒，如果货车的速度为原来速度的1.4倍，那么列车追上火车就需要15秒。火车的速度是每秒多少米？</p><p><strong>4.</strong>在与铁路平行的公路上，又一行人和一骑自行车的人同向前进，行人每小时走3.6千米，骑车人每小时行10.8千米.在铁路上从这两人后面又列火车开来，火车通过行人用22秒，通过骑车人用26秒。这列火车全长多少千米?</p><p><strong>5.</strong>长90米的列车速度是54千米/小时，它追上并超过长50米的列车用了14秒。如果这两列列车相向而行，从相遇到完全离开要用多长时间？</p><p><strong>6.</strong>在双轨的铁道上，速度为54千米/小时的货车，10时到达铁桥，10时1分24秒完全通过铁桥，后来一列速度为72千米/小时的列车10时12分到达铁桥，10时12分53秒完全通过铁桥。10时28分56秒列车完全超过在前面行驶的货车。求货车、列车和铁桥的长度各是多少米？</p><h2 id="拓展学习"><a href="#拓展学习" class="headerlink" title="拓展学习"></a>拓展学习</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
-    
-      <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="火车行程问题" scheme="http://www.xmakers.cn/tags/%E7%81%AB%E8%BD%A6%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
