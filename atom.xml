@@ -98,35 +98,6 @@
   </entry>
   
   <entry>
-    <title>【小学数学】1909026—行程问题</title>
-    <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%201/"/>
-    <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 1/</id>
-    <published>2019-09-25T16:00:00.000Z</published>
-    <updated>2019-09-26T03:23:41.928Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学应用题-行程问题"><a href="#小学数学应用题-行程问题" class="headerlink" title="小学数学应用题-行程问题"></a>小学数学应用题-行程问题</h1><h2 id="行程问题引入"><a href="#行程问题引入" class="headerlink" title="行程问题引入"></a>行程问题引入</h2><p>走路、行车、一个物体的移动，总是要涉及到三个数量：</p><p><strong>距离</strong> <em>走了多远，行驶多少千米，移动了多少米等等；</em></p><p><strong>速度</strong> <em>在单位时间内（例如1小时内）行走或移动的距离；</em></p><p><strong>时间</strong> <em>行走或移动所花时间</em></p><p>这三个数量之间的关系，可以用下面的公式来表示：</p><p>$距离=速度\times时间$</p><p>很明显，只要知道其中的两个数量，就马上可以求出第三个数量.从数学上说，这是一种最基本的数量关系，在小学的应用题中，这样的数量关系也是最常见的，例如<br>$总量=每个人数量\times人数$<br>$工作量=工作效率\times时间$</p><p>因此，我们从行程问题入手，掌握一些处理这样数量关系的思路、方法和技巧，就能类似地解其他问题.</p><p>当然行程问题又它独自的特点，在小学的应用题中，行程问题的内容最丰富多彩，饶有兴趣。它不仅仅在小学，而且在中学数学、物理的学习中，也是一个重点内容。因此，我们非常希望大家能学好这一讲，特别是学会对一些问题的思考方法和处理技巧.</p><p>这一讲，用5千米/小时表示速度是每小时5千米，用3米/秒表示速度是每秒3米</p><h2 id="追及与相遇应用题"><a href="#追及与相遇应用题" class="headerlink" title="追及与相遇应用题"></a>追及与相遇应用题</h2><p><em>有两个人同时在行走，一个走得快，一个走得慢，当走得慢得在前，走得快得过了一段时间就能追上他.这就产生了追击问题。实质上，要算走得快得人在某一段时间内，比走得慢得人多走得距离，也就是要计算两人走的距离之差.如果设甲走得快，乙走得慢，在相同得时间内，</em></p><p>甲走得距离-乙走得距离<br>$=甲得速度\times时间-乙得速度\times时间$<br>$=（甲得速度-乙得速度）\times时间$</p><p>多数得“追及问题”要考虑速度差.</p><p><strong>例1</strong> 面包车得速度是60千米/小时，小轿车得速度是84千米/小时.在面包车开出30分钟后，小轿车沿着同一行驶路线去追赶面包车，多长时间后能追上？（面包车和小轿车出发地点相同）</p><p>解：</p><p><strong>例2</strong> 上午8点8分，小明骑自行车从家里出发，8分钟后，爸爸骑摩托车去追他，在离家4千米得地方追上了她.然后爸爸立即回家，到家后又立刻回头去追小明，在追上小明得时候，离家恰好是8千米，这时是几点几分</p><p>解：</p><p><em>小王从甲地到乙地，小张从乙地到甲地，然后在途中相遇，实质上是小王和小张一起走了甲、乙之间这段距离。如果两人同时出发，那么</em></p><p>甲走得距离+乙走得距离<br>$=甲得速度\times时间+乙得速度\times时间$<br>$=（甲得速度+乙得速度）\times时间$</p><p>“相遇问题”，常常要考虑两人得速度和</p><p><strong>例3</strong> 小张从甲地到乙地步行需要36分钟，小王骑自行车从乙地到甲地需要12分钟.他们同时出发，几分钟后两人相遇？</p><p>解：</p><p><strong>例4</strong> 小王的步行速度是4.8千米/小时，小张不行的速度是5.4千米/小时，他们两人从甲地到乙地去。小李骑自行车的速度是10.8千米/小时，从乙地到甲地去。他们3人同时出发，在小张与小李相遇后5分钟，小王又与小李相遇.问：小李骑车从乙地到甲地需要多少时间？</p><p>解：</p><p><strong>例5</strong> 小张从甲地到乙地，步行速度是5千米/小时，小王从乙地到甲地，步行速度是4千米/小时。两人同时出发，然后再离甲、乙两地的中点1千米的地方相遇，求甲、乙两地间的距离？</p><p>解：</p><p><strong>例6</strong> 甲村、乙村相距6千米，小张和小王分别从甲、乙两村同时出发，在两村之间往返走（到达另一个村后就马上折回）在出发后40分钟两人第一次相遇，小王到达甲村后返回，在离甲村2千米的地方两人第二次相遇。问小张和小王的速度各是多少？</p><p>解：</p><p><strong>例7</strong> 如图，从A到B是1千米的下坡路，从B到C是3千米平路，从C到D是2.5千米的上坡路。小张和小王步行，下坡的速度都是6千米/小时，平路都是4千米/小时，上坡速度都是2千米/小时，小张和小王分别从A、D同时出发相向而行，问多长时间后他们相遇？</p><p>解：</p><h2 id="重要内容回顾"><a href="#重要内容回顾" class="headerlink" title="重要内容回顾"></a>重要内容回顾</h2><ul><li>追及问题；</li><li>相遇问题。</li></ul><h2 id="在线测试"><a href="#在线测试" class="headerlink" title="在线测试"></a>在线测试</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p><strong>1.</strong>兄弟两人同时从家出发步行去车站，16分钟后哥哥到达陈展，弟弟离车站还有240米。哥哥的速度是82米/分，问弟弟的速度是多少（单位用米/分钟）</p><p><strong>2.</strong>姊姊步行的速度是75米/分，妹妹步行速度是65米/分，在妹妹出发20分钟后，姊姊出发追赶妹妹。问：多少分钟后能追上</p><p><strong>3.</strong>小张和小王，分别从甲、乙两村同时出发步行，1小时15分钟后，小张走了甲、乙两村间的距离一般还多0.75千米，此时与小王相遇。小王的适度是3.7千米/小时，那么小张的速度是多少？（单位用千米/小时）</p><p><strong>4.</strong>一支部队拍成1.2千米的长队行军，在队尾的张明与在最前面的营长联系，他用6分钟时间追上了营长。为了回到队尾，在追上营长的地方等待了18分钟，如果他从最前头跑回队尾，那么要多少时间？</p><p><strong>5.</strong>一辆快车与一辆慢车分别从甲、乙两地同时开出，他们相向而行。快车经过8小时到达乙地，慢车经过10小时到达甲地，已知平均每小时快车比慢车多行驶1.2千米，问开出后多少时间两车相遇？</p><p><strong>6.</strong>小张、小王、小李的步行速度分别是100米/分，80米/分，70米/分。小张和小王从学校到少年宫，小李是从少年宫到学校。他们同时出发，在小张与小李相遇后2分钟，小王也与小李相遇，问：学校到少年宫距离是多少米？</p><p><strong>7.</strong>家离图书馆4.8千米，弟弟从家出发以60米/分速度步行去图书馆。15分钟后，哥哥骑自行车从家出发去追赶弟弟，系行车的速度是240米/分，问：</p><p>（1）哥哥在离家多远的地方可以追上弟弟?</p><p>（2）哥哥追上弟弟后不久到达图书馆，又马上折回，过不久与弟弟相遇，那么相遇处离图书馆多远？</p><h2 id="拓展学习"><a href="#拓展学习" class="headerlink" title="拓展学习"></a>拓展学习</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
-    
-    
-      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
-    
-      <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="追及与相遇" scheme="http://www.xmakers.cn/tags/%E8%BF%BD%E5%8F%8A%E4%B8%8E%E7%9B%B8%E9%81%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【小学数学】1909026—行程问题(三)</title>
     <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%203/"/>
     <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 3/</id>
@@ -181,6 +152,35 @@
       <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
     
       <category term="火车行程问题" scheme="http://www.xmakers.cn/tags/%E7%81%AB%E8%BD%A6%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【小学数学】1909026—行程问题</title>
+    <link href="http://www.xmakers.cn/2019/09/26/2019-09-26-%20xingcheng%20-%201/"/>
+    <id>http://www.xmakers.cn/2019/09/26/2019-09-26- xingcheng - 1/</id>
+    <published>2019-09-25T16:00:00.000Z</published>
+    <updated>2019-09-26T03:23:41.928Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="小学数学应用题-行程问题"><a href="#小学数学应用题-行程问题" class="headerlink" title="小学数学应用题-行程问题"></a>小学数学应用题-行程问题</h1><h2 id="行程问题引入"><a href="#行程问题引入" class="headerlink" title="行程问题引入"></a>行程问题引入</h2><p>走路、行车、一个物体的移动，总是要涉及到三个数量：</p><p><strong>距离</strong> <em>走了多远，行驶多少千米，移动了多少米等等；</em></p><p><strong>速度</strong> <em>在单位时间内（例如1小时内）行走或移动的距离；</em></p><p><strong>时间</strong> <em>行走或移动所花时间</em></p><p>这三个数量之间的关系，可以用下面的公式来表示：</p><p>$距离=速度\times时间$</p><p>很明显，只要知道其中的两个数量，就马上可以求出第三个数量.从数学上说，这是一种最基本的数量关系，在小学的应用题中，这样的数量关系也是最常见的，例如<br>$总量=每个人数量\times人数$<br>$工作量=工作效率\times时间$</p><p>因此，我们从行程问题入手，掌握一些处理这样数量关系的思路、方法和技巧，就能类似地解其他问题.</p><p>当然行程问题又它独自的特点，在小学的应用题中，行程问题的内容最丰富多彩，饶有兴趣。它不仅仅在小学，而且在中学数学、物理的学习中，也是一个重点内容。因此，我们非常希望大家能学好这一讲，特别是学会对一些问题的思考方法和处理技巧.</p><p>这一讲，用5千米/小时表示速度是每小时5千米，用3米/秒表示速度是每秒3米</p><h2 id="追及与相遇应用题"><a href="#追及与相遇应用题" class="headerlink" title="追及与相遇应用题"></a>追及与相遇应用题</h2><p><em>有两个人同时在行走，一个走得快，一个走得慢，当走得慢得在前，走得快得过了一段时间就能追上他.这就产生了追击问题。实质上，要算走得快得人在某一段时间内，比走得慢得人多走得距离，也就是要计算两人走的距离之差.如果设甲走得快，乙走得慢，在相同得时间内，</em></p><p>甲走得距离-乙走得距离<br>$=甲得速度\times时间-乙得速度\times时间$<br>$=（甲得速度-乙得速度）\times时间$</p><p>多数得“追及问题”要考虑速度差.</p><p><strong>例1</strong> 面包车得速度是60千米/小时，小轿车得速度是84千米/小时.在面包车开出30分钟后，小轿车沿着同一行驶路线去追赶面包车，多长时间后能追上？（面包车和小轿车出发地点相同）</p><p>解：</p><p><strong>例2</strong> 上午8点8分，小明骑自行车从家里出发，8分钟后，爸爸骑摩托车去追他，在离家4千米得地方追上了她.然后爸爸立即回家，到家后又立刻回头去追小明，在追上小明得时候，离家恰好是8千米，这时是几点几分</p><p>解：</p><p><em>小王从甲地到乙地，小张从乙地到甲地，然后在途中相遇，实质上是小王和小张一起走了甲、乙之间这段距离。如果两人同时出发，那么</em></p><p>甲走得距离+乙走得距离<br>$=甲得速度\times时间+乙得速度\times时间$<br>$=（甲得速度+乙得速度）\times时间$</p><p>“相遇问题”，常常要考虑两人得速度和</p><p><strong>例3</strong> 小张从甲地到乙地步行需要36分钟，小王骑自行车从乙地到甲地需要12分钟.他们同时出发，几分钟后两人相遇？</p><p>解：</p><p><strong>例4</strong> 小王的步行速度是4.8千米/小时，小张不行的速度是5.4千米/小时，他们两人从甲地到乙地去。小李骑自行车的速度是10.8千米/小时，从乙地到甲地去。他们3人同时出发，在小张与小李相遇后5分钟，小王又与小李相遇.问：小李骑车从乙地到甲地需要多少时间？</p><p>解：</p><p><strong>例5</strong> 小张从甲地到乙地，步行速度是5千米/小时，小王从乙地到甲地，步行速度是4千米/小时。两人同时出发，然后再离甲、乙两地的中点1千米的地方相遇，求甲、乙两地间的距离？</p><p>解：</p><p><strong>例6</strong> 甲村、乙村相距6千米，小张和小王分别从甲、乙两村同时出发，在两村之间往返走（到达另一个村后就马上折回）在出发后40分钟两人第一次相遇，小王到达甲村后返回，在离甲村2千米的地方两人第二次相遇。问小张和小王的速度各是多少？</p><p>解：</p><p><strong>例7</strong> 如图，从A到B是1千米的下坡路，从B到C是3千米平路，从C到D是2.5千米的上坡路。小张和小王步行，下坡的速度都是6千米/小时，平路都是4千米/小时，上坡速度都是2千米/小时，小张和小王分别从A、D同时出发相向而行，问多长时间后他们相遇？</p><p>解：</p><h2 id="重要内容回顾"><a href="#重要内容回顾" class="headerlink" title="重要内容回顾"></a>重要内容回顾</h2><ul><li>追及问题；</li><li>相遇问题。</li></ul><h2 id="在线测试"><a href="#在线测试" class="headerlink" title="在线测试"></a>在线测试</h2><p>温馨提示：请在线作答，以便及时反馈孩子的薄弱环节。</p><p><strong>1.</strong>兄弟两人同时从家出发步行去车站，16分钟后哥哥到达陈展，弟弟离车站还有240米。哥哥的速度是82米/分，问弟弟的速度是多少（单位用米/分钟）</p><p><strong>2.</strong>姊姊步行的速度是75米/分，妹妹步行速度是65米/分，在妹妹出发20分钟后，姊姊出发追赶妹妹。问：多少分钟后能追上</p><p><strong>3.</strong>小张和小王，分别从甲、乙两村同时出发步行，1小时15分钟后，小张走了甲、乙两村间的距离一般还多0.75千米，此时与小王相遇。小王的适度是3.7千米/小时，那么小张的速度是多少？（单位用千米/小时）</p><p><strong>4.</strong>一支部队拍成1.2千米的长队行军，在队尾的张明与在最前面的营长联系，他用6分钟时间追上了营长。为了回到队尾，在追上营长的地方等待了18分钟，如果他从最前头跑回队尾，那么要多少时间？</p><p><strong>5.</strong>一辆快车与一辆慢车分别从甲、乙两地同时开出，他们相向而行。快车经过8小时到达乙地，慢车经过10小时到达甲地，已知平均每小时快车比慢车多行驶1.2千米，问开出后多少时间两车相遇？</p><p><strong>6.</strong>小张、小王、小李的步行速度分别是100米/分，80米/分，70米/分。小张和小王从学校到少年宫，小李是从少年宫到学校。他们同时出发，在小张与小李相遇后2分钟，小王也与小李相遇，问：学校到少年宫距离是多少米？</p><p><strong>7.</strong>家离图书馆4.8千米，弟弟从家出发以60米/分速度步行去图书馆。15分钟后，哥哥骑自行车从家出发去追赶弟弟，系行车的速度是240米/分，问：</p><p>（1）哥哥在离家多远的地方可以追上弟弟?</p><p>（2）哥哥追上弟弟后不久到达图书馆，又马上折回，过不久与弟弟相遇，那么相遇处离图书馆多远？</p><h2 id="拓展学习"><a href="#拓展学习" class="headerlink" title="拓展学习"></a>拓展学习</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+      <category term="共同成长" scheme="http://www.xmakers.cn/categories/%E5%85%B1%E5%90%8C%E6%88%90%E9%95%BF/"/>
+    
+    
+      <category term="每日练" scheme="http://www.xmakers.cn/tags/%E6%AF%8F%E6%97%A5%E7%BB%83/"/>
+    
+      <category term="行程问题" scheme="http://www.xmakers.cn/tags/%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="追及与相遇" scheme="http://www.xmakers.cn/tags/%E8%BF%BD%E5%8F%8A%E4%B8%8E%E7%9B%B8%E9%81%87/"/>
     
   </entry>
   
@@ -424,13 +424,13 @@
   </entry>
   
   <entry>
-    <title>【小学数学】2018年综合测评数学计算题</title>
-    <link href="http://www.xmakers.cn/2019/09/01/2019-09-01-maths%20-Part1.A.Cal2018/"/>
-    <id>http://www.xmakers.cn/2019/09/01/2019-09-01-maths -Part1.A.Cal2018/</id>
+    <title>【小学数学】2017年综合测评数学计算题</title>
+    <link href="http://www.xmakers.cn/2019/09/01/2019-09-01-maths%20-Part1.A.Cal2017/"/>
+    <id>http://www.xmakers.cn/2019/09/01/2019-09-01-maths -Part1.A.Cal2017/</id>
     <published>2019-08-31T16:00:00.000Z</published>
-    <updated>2019-09-01T02:47:03.799Z</updated>
+    <updated>2019-09-01T02:48:14.910Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2018年综合测评数学计算题"><a href="#2018年综合测评数学计算题" class="headerlink" title="2018年综合测评数学计算题"></a>2018年综合测评数学计算题</h2><p>1.（2018综合测试）$15\times\frac{1}{4}+27\times0.25+58\times\frac{25}{100}$</p><p> 2.（2018综合测试）$2-[1-(\frac{3}{4}-\frac{3}{4}\div\frac{12}{5})]\div\frac{7}{8}$</p><p> 3.（2018综合测试）$\frac{2\times2}{1\times3}+\frac{4\times4}{3\times5}+\frac{6\times6}{5\times7}+\frac{8\times8}{7\times9}+\frac{10\times10}{9\times11}$</p><p> 4.（2018综合测试）$\frac{1}{6}+\frac{1}{24}+\frac{1}{60}+\frac{1}{120}+\frac{1}{210}$</p><p> 5.（2018提高卷）$\frac{4\times4}{1\times3}+\frac{8\times8}{3\times5}+\frac{12\times12}{5\times7}+\frac{16\times16}{7\times9}+\frac{20\times20}{9\times11}$</p><p> 6.（2018提高卷）$\frac{1}{1\times2\times3\times4}+\frac{1}{2\times3\times4\times5}+\frac{1}{3\times4\times5\times6}+\cdots+\frac{1}{6\times7\times8\times9}+\frac{1}{7\times8\times9\times10}$</p><p> 7.（2018提高卷）$30^2-29^2+28^2-27^2+\cdots+2^2-1^2$</p><p><a href="/down/181023_2009年迎春杯.pdf">2016年综合测评数学计算题PDF打印版</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2017年综合测评数学计算题"><a href="#2017年综合测评数学计算题" class="headerlink" title="2017年综合测评数学计算题"></a>2017年综合测评数学计算题</h2><p> 1.（2017综合测试）$3333\times3333+9999\times8889$</p><p> 2.（2017综合测试）$\frac{3}{4}+\frac{3}{28}+\frac{3}{70}+\frac{3}{130}+\frac{3}{208}$</p><p> 3.（2017综合测试）$28^2-27^2+26^2-25^2+\cdots+2^2-1^1$</p><p> 4.（2017综合测试）$61\frac{1}{5}\times\frac{5}{6}+51\frac{1}{4}\times\frac{4}{5}+41\frac{1}{3}\times\frac{3}{4}+31\frac{1}{2}\times\frac{2}{3}$</p><p> 5.（2017提高卷）$\frac{1\times2\times3+2\times3\times4\times6+3\times6\times9+\cdots+2016\times4032\times6048}{3\times4\times5+6\times8\times10+9\times12\times15+\cdots+6048\times8064\times10080}$</p><p> 6.（2017提高卷）$\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\frac{5}{6}+\frac{7}{12}+\frac{11}{30}$</p><p><a href="/down/181023_2009年迎春杯.pdf">2016年综合测评数学计算题PDF打印版</a></p>]]></content>
     
     <summary type="html">
     
@@ -451,13 +451,13 @@
   </entry>
   
   <entry>
-    <title>【小学数学】2017年综合测评数学计算题</title>
-    <link href="http://www.xmakers.cn/2019/09/01/2019-09-01-maths%20-Part1.A.Cal2017/"/>
-    <id>http://www.xmakers.cn/2019/09/01/2019-09-01-maths -Part1.A.Cal2017/</id>
+    <title>【小学数学】2018年综合测评数学计算题</title>
+    <link href="http://www.xmakers.cn/2019/09/01/2019-09-01-maths%20-Part1.A.Cal2018/"/>
+    <id>http://www.xmakers.cn/2019/09/01/2019-09-01-maths -Part1.A.Cal2018/</id>
     <published>2019-08-31T16:00:00.000Z</published>
-    <updated>2019-09-01T02:48:14.910Z</updated>
+    <updated>2019-09-01T02:47:03.799Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2017年综合测评数学计算题"><a href="#2017年综合测评数学计算题" class="headerlink" title="2017年综合测评数学计算题"></a>2017年综合测评数学计算题</h2><p> 1.（2017综合测试）$3333\times3333+9999\times8889$</p><p> 2.（2017综合测试）$\frac{3}{4}+\frac{3}{28}+\frac{3}{70}+\frac{3}{130}+\frac{3}{208}$</p><p> 3.（2017综合测试）$28^2-27^2+26^2-25^2+\cdots+2^2-1^1$</p><p> 4.（2017综合测试）$61\frac{1}{5}\times\frac{5}{6}+51\frac{1}{4}\times\frac{4}{5}+41\frac{1}{3}\times\frac{3}{4}+31\frac{1}{2}\times\frac{2}{3}$</p><p> 5.（2017提高卷）$\frac{1\times2\times3+2\times3\times4\times6+3\times6\times9+\cdots+2016\times4032\times6048}{3\times4\times5+6\times8\times10+9\times12\times15+\cdots+6048\times8064\times10080}$</p><p> 6.（2017提高卷）$\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\frac{5}{6}+\frac{7}{12}+\frac{11}{30}$</p><p><a href="/down/181023_2009年迎春杯.pdf">2016年综合测评数学计算题PDF打印版</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2018年综合测评数学计算题"><a href="#2018年综合测评数学计算题" class="headerlink" title="2018年综合测评数学计算题"></a>2018年综合测评数学计算题</h2><p>1.（2018综合测试）$15\times\frac{1}{4}+27\times0.25+58\times\frac{25}{100}$</p><p> 2.（2018综合测试）$2-[1-(\frac{3}{4}-\frac{3}{4}\div\frac{12}{5})]\div\frac{7}{8}$</p><p> 3.（2018综合测试）$\frac{2\times2}{1\times3}+\frac{4\times4}{3\times5}+\frac{6\times6}{5\times7}+\frac{8\times8}{7\times9}+\frac{10\times10}{9\times11}$</p><p> 4.（2018综合测试）$\frac{1}{6}+\frac{1}{24}+\frac{1}{60}+\frac{1}{120}+\frac{1}{210}$</p><p> 5.（2018提高卷）$\frac{4\times4}{1\times3}+\frac{8\times8}{3\times5}+\frac{12\times12}{5\times7}+\frac{16\times16}{7\times9}+\frac{20\times20}{9\times11}$</p><p> 6.（2018提高卷）$\frac{1}{1\times2\times3\times4}+\frac{1}{2\times3\times4\times5}+\frac{1}{3\times4\times5\times6}+\cdots+\frac{1}{6\times7\times8\times9}+\frac{1}{7\times8\times9\times10}$</p><p> 7.（2018提高卷）$30^2-29^2+28^2-27^2+\cdots+2^2-1^2$</p><p><a href="/down/181023_2009年迎春杯.pdf">2016年综合测评数学计算题PDF打印版</a></p>]]></content>
     
     <summary type="html">
     
